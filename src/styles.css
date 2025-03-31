@@ -1,34 +1,37 @@
 @import "tailwindcss";
 
 .moonMovementAnimation {
-    animation: moonAnimation 24s linear infinite;
+    animation: moonAnimation 5s linear infinite;
 }
 
 .sunMovementAnimation {
-    animation: sunAnimation 24s linear infinite;
+    animation: sunAnimation 15s linear infinite;
 }
 
 @keyframes moonAnimation {
     0% { 
-        transform: translateY(-100vh); /* Starts at the top, off-screen */
+        /* transform: translateY(100vh); */
+        transform: translatex(0vh);
     }
     50% { 
-        transform: translateY(0); /* Midway, moon at center */
+        /* transform: translateY(0); */
+        transform: translatex(-100vh);
     }
     100% { 
-        transform: translateY(100vh); /* Ends at the bottom, off-screen */
+        /* transform: translateY(-100vh); */
+        transform: translateY(100vh);
     }
 }
 
 @keyframes sunAnimation {
     0% { 
-        transform: translateY(100vh); /* Starts at the bottom, off-screen */
+        transform: translateY(-100vh); 
     }
     50% { 
-        transform: translateY(0); /* Midway, sun at center */
+        transform: translateY(0); 
     }
     100% { 
-        transform: translateY(-100vh); /* Ends at the top, off-screen */
+        transform: translateY(100vh);
     }
 }
 
