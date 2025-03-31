@@ -1,0 +1,9 @@
+@keyframes spinClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .rotating {
+    animation: spinClockwise 4s linear infinite;
+  }
+  
