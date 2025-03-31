@@ -10,18 +10,22 @@
 
 @keyframes moonAnimation {
     0% { 
-        /* transform: translateY(100vh); */
-        transform: translatex(0vh);
+        transform: translateY(100vh) translateX(-50vh);
+    }
+    25% {
+        transform: translateY(80vh) translateX(-20vh);
     }
     50% { 
-        /* transform: translateY(0); */
-        transform: translatex(-100vh);
+        transform: translateY(40vh) translateX(0vh);
+    }
+    75% {
+        /* transform: translateY(0) translateX(50vh); */
     }
     100% { 
-        /* transform: translateY(-100vh); */
-        transform: translateY(100vh);
+        /* transform: translateY(-100vh) translateX(100vh); */
     }
 }
+
 
 @keyframes sunAnimation {
     0% { 
