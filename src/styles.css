@@ -8,6 +8,30 @@
     animation: sunAnimation 15s linear infinite;
 }
 
+.toNight {
+    animation: rotateToNight 5s ease-in-out forwards;
+}
+
+.toDay {
+    animation: rotateToDay 5s ease-in-out forwards;
+}
+
+@keyframes rotateToNight {
+    0% {
+        transform: rotate(180deg);
+    } 100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateToDay {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(180deg);
+    }
+}
+
 @keyframes moonAnimation {
     0% { 
         transform: translateY(-100vh); 
