@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .moonMovementAnimation {
-    animation: moonAnimation 5s linear infinite;
+    /* animation: moonAnimation 5s linear infinite; */
 }
 
 .sunMovementAnimation {
@@ -10,19 +10,13 @@
 
 @keyframes moonAnimation {
     0% { 
-        transform: translateY(100vh) translateX(-50vh);
-    }
-    25% {
-        transform: translateY(80vh) translateX(-20vh);
+        transform: translateY(-100vh); 
     }
     50% { 
-        transform: translateY(40vh) translateX(0vh);
-    }
-    75% {
-        /* transform: translateY(0) translateX(50vh); */
+        transform: translateY(0); 
     }
     100% { 
-        /* transform: translateY(-100vh) translateX(100vh); */
+        transform: translateY(100vh);
     }
 }
 
