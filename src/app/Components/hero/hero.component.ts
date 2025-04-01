@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-  
+  isNight: boolean = true;
+
+  toggleDayNight():void {
+    this.isNight = !this.isNight
+  }
 }
