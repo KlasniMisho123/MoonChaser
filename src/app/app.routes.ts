@@ -1,10 +1,12 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './Components/home-page/home-page.component';
-
-export const routes: Routes = [
+import { LayoutComponent } from './Components/layout/layout.component';
+const routes: Routes = [
     {
         path: "",
-        component: HomePageComponent,
-        pathMatch: "full",
-    },
+        component: LayoutComponent,
+        children: [
+            { path: "", component: HomePageComponent }
+        ]
+    }
 ];
