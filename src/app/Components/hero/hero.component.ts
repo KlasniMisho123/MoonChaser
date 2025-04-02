@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -10,7 +10,17 @@ import { Component } from '@angular/core';
 export class HeroComponent {
   isNight: boolean = true;
 
+  constructor(private renderer: Renderer2) {}
+
   toggleDayNight():void {
     this.isNight = !this.isNight
+
+    if(this.isNight) {
+      this.renderer.addClass(document.body, 'night-mode');
+      this.renderer.removeClass(document.body, 'day-mode');
+    } else {
+      this.renderer.addClass(document.body, 'day-mode');
+      this.renderer.removeClass(document.body, 'night-mode');
+    }
   }
 }

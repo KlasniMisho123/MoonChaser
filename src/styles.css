@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+body {
+  background-color: #1a1a2e;
+}
+
+.night-mode {
+  background-color: #1a1a2e; /* Dark night color */
+  color: white;
+  transition: background-color 1s ease-in-out;
+}
+
+.day-mode {
+  background-color: #fcfcfb; /* Light day color */
+  color: black;
+  transition: background-color 1s ease-in-out;
+}
+
+
 .moonMovementAnimation {
     /* animation: moonAnimation 5s linear infinite; */
 }
