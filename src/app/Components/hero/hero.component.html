@@ -4,4 +4,13 @@
         <img src="day&night.png" class="w-[200px] h-auto drop-shadow-lg" [ngClass]="isNight? 'toNight' : 'toDay'">
     </button>
 </div>
-<div>ss</div>
+<div class="flex justify-center ">
+    <div class="flex items-center">
+        <div class="moonMovementAnimation">   
+            <img class="w-[100px] h-[100px]" [*ngIf]="isNight? src='moonImg.png': src='sunImg.png'"  alt="moon" />
+        </div> 
+        <h4 class="text-4xl font-bold tracking-wide drop-shadow-lg glow-text text-white ">
+            Moon Chaser
+        </h4>
+    </div>
+</div>

@@ -2,9 +2,3 @@
 
 
 2. moon chaser ...
-<div class="moonMovementAnimation">   
-    <img class="w-[100px] h-[100px]" src="moonImg.png" alt="moon" />
-</div> 
-<h4 class="text-4xl font-bold tracking-wide drop-shadow-lg glow-text text-white ">
-    Chaser
-</h4>

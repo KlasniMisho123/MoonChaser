@@ -2,16 +2,18 @@
 
 body {
   background-color: #1a1a2e;
+  color: white;
+  transition: background-color 1s ease-in-out;
 }
 
 .night-mode {
-  background-color: #1a1a2e; /* Dark night color */
+  background-color: #1a1a2e;
   color: white;
   transition: background-color 1s ease-in-out;
 }
 
 .day-mode {
-  background-color: #fcfcfb; /* Light day color */
+  background-color: #fcfcfb;
   color: black;
   transition: background-color 1s ease-in-out;
 }
