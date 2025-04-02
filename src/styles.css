@@ -6,7 +6,9 @@ body {
   transition: background-color 1s ease-in-out;
 }
 
-.night-mode {
+/* Day/Night Theme (not included yet) */
+
+/* .night-mode {
   background-color: #1a1a2e;
   color: white;
   transition: background-color 1s ease-in-out;
@@ -16,6 +18,21 @@ body {
   background-color: #fcfcfb;
   color: black;
   transition: background-color 1s ease-in-out;
+} */
+
+
+.moonMovementAnimation img {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.moonMovementAnimation img.toNight {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.moonMovementAnimation img.toDay {
+  transform: rotate(0deg);
+  opacity: 1;
 }
 
 
