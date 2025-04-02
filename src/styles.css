@@ -44,6 +44,8 @@ body {
     animation: sunAnimation 15s linear infinite;
 }
 
+
+
 @keyframes rotateToNight {
     0% {
       transform: rotate(180deg);
