@@ -7,9 +7,9 @@
 <div class="flex justify-center ">
     <div class="flex items-center">
         <div class="moonMovementAnimation">   
-            <img class="w-[100px] h-[100px]" [*ngIf]="isNight? src='moonImg.png': src='sunImg.png'"  alt="moon" />
+            <img class="w-[100px] h-[100px]" [src]="isNight? 'moonImg.png' : 'sun.png' " alt="moon" />
         </div> 
-        <h4 class="text-4xl font-bold tracking-wide drop-shadow-lg glow-text text-white ">
+        <h4 class="text-4xl font-bold tracking-wide drop-shadow-lg glow-text " [ngClass]="isNight? 'text-white' : 'text-[#FF9B17]' ">
             Moon Chaser
         </h4>
     </div>
