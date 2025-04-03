@@ -14,12 +14,21 @@ body {
 
 .nav-link {
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; 
+  color: white; 
 }
 
 .nav-link:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); 
+  color: #4F9D9C; 
 }
+
+.nav-link.active {
+  font-weight: bold;
+  color: #1E90FF;
+  border-bottom: 2px solid #1E90FF;
+}
+
 
 .day-mode {
   background: linear-gradient(to bottom, #87CEFA, #4682B4);
