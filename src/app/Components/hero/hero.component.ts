@@ -16,13 +16,12 @@ export class HeroComponent {
   toggleDayNight():void {
     this.isNight = !this.isNight
 
-    // Day/Night Theme (not included yet)
-    // if(this.isNight) {
-    //   this.renderer.addClass(document.body, 'night-mode');
-    //   this.renderer.removeClass(document.body, 'day-mode');
-    // } else {
-    //   this.renderer.addClass(document.body, 'day-mode');
-    //   this.renderer.removeClass(document.body, 'night-mode');
-    // }
+    if(this.isNight) {
+      this.renderer.addClass(document.body, 'night-mode');
+      this.renderer.removeClass(document.body, 'day-mode');
+    } else {
+      this.renderer.addClass(document.body, 'day-mode');
+      this.renderer.removeClass(document.body, 'night-mode');
+    }
   }
 }
