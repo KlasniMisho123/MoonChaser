@@ -1,16 +1,15 @@
 <div  class="h-[40vh]">
     <div class="flex justify-center gap-4 mt-8 ">
-        <div class="sm:text-base md:text-lg text-white cursor-pointer hover:text-blue-500 transition-all duration-300 hover:scale-85"
+        <div class="sm:text-base md:text-lg  cursor-pointer hover:text-blue-500 transition-all duration-100 hover:scale-85"
         (click)="setWeatherSection('Daily')"
-        [ngClass]="currentWeatherSection==='Daily'? ' pb-1 border-b-1 border-blue-500 text-blue-400': '' "
-        >
-            Current
+        [ngClass]="currentWeatherSection==='Daily'? ' pb-1 border-b-1 border-blue-500 text-blue-400': 'text-white' "
+        > Current
         </div>
-        <div class="sm:text-base md:text-lg text-white cursor-pointer hover:text-blue-500 transition-all duration-300 hover:scale-85"
+
+        <div class="sm:text-base md:text-lg  cursor-pointer hover:text-blue-500 transition-all duration-100 hover:scale-85 "
         (click)="setWeatherSection('Weekly')"
-        [ngClass]="currentWeatherSection==='Weekly'? ' pb-1 border-b-1 border-blue-500 text-blue-400': '' "
-        >
-            Weekly
+        [ngClass]="currentWeatherSection==='Weekly'? ' pb-1 border-b-1 border-blue-500 text-blue-400': 'text-white' "
+        > Weekly
         </div>
     </div>
 
