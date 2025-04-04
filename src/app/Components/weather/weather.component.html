@@ -11,10 +11,10 @@
         [ngClass]="currentWeatherSection==='Weekly'? ' pb-1 border-b-1 border-blue-500 text-blue-400': 'text-white' "
         > Weekly
         </div>
+
+        <app-daily-weather></app-daily-weather>
+        <app-weekly-weather></app-weekly-weather>
     </div>
 
-    <div class="flex justify-center mt-8">
-        <input type="text" placeholder="City" class="bg-transparent border-b-1 rounded border-gray-100 text-white placeholder-gray-500 py-2 px-3 text-sm lg:text-base 
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
-    </div>
+   
 </div>
