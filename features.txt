@@ -12,3 +12,8 @@ moonPhases.jpg
 
 --- Heropage ---
 6. Heropage update
+
+-- reusable components --
+
+1. button?
+2. logo?

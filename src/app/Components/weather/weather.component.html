@@ -12,11 +12,9 @@
         > Weekly
         </div>
     </div>
-    <div class="bg-red-400" *ngIf="currentWeatherSection==='Daily'">
-        <app-daily-weather></app-daily-weather>
-    </div>
-    <div class="bg-red-400" *ngIf="currentWeatherSection==='Weekly'">
-        <app-weekly-weather></app-weekly-weather>
+    <div>
+        <app-daily-weather *ngIf="currentWeatherSection==='Daily'"></app-daily-weather>
+        <app-weekly-weather *ngIf="currentWeatherSection==='Weekly'"></app-weekly-weather>
     </div>
     
    
