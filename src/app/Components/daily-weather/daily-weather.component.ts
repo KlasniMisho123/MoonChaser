@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-daily-weather',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './daily-weather.component.html',
   styleUrl: './daily-weather.component.css'
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class DailyWeatherComponent {
   inputedCity: string = ""
 
-  getInputedCity(city:string):void {
+  getWeather(city:string):void {
     this.inputedCity = city
     console.log(city)
   }
