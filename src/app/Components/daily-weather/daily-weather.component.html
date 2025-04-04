@@ -17,15 +17,21 @@
      </div>
 </div>
 <div class="flex justify-center "> 
+    <!-- Work on Property Binding -->
     <form  #form="ngForm" class="flex flex-col justify-center mt-12 gap-8">
+        <div class="text-red-400 text-sm mt-1" *ngIf="inputedCityRef.touched && inputedCityRef.invalid">
+            <span *ngIf="inputedCityRef.errors?.['required']">🚩 City is required.</span>
+          </div>
         <input 
+        #inputedCityRef="ngModel"
         type="text" 
         name="inputedCity"
-        placeholder="City"
         [(ngModel)]="inputedCity"
         required
+        placeholder="City"
         class="bg-gray-700 border-b-1 rounded border-gray-100 text-white placeholder-gray-500 py-2 px-3 text-sm lg:text-base 
         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+
         <button 
         (click)="getWeather(inputedCity)"
         class="bg-white text-blue-600 py-2 px-6 rounded-full text-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300 
@@ -34,20 +40,4 @@
             <i class="fa-solid fa-eye"></i>
         </button>
     </form>
-    <!-- <form #form="ngForm" class="flex flex-col justify-center mt-12 gap-8">
-        <input 
-        type="text" 
-        name="cityName"
-        [(ngModel)]="cityName"
-        placeholder="City"
-        class="bg-gray-700 border-b-1 rounded border-gray-100 text-white placeholder-gray-500 py-2 px-3 text-sm lg:text-base 
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
-        <button 
-        (click)="getWeather()"
-        class="bg-white text-blue-600 py-2 px-6 rounded-full text-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300 
-        focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-opacity-50 relative cursor-pointer hover:opacity-90">
-            Get Current Weather
-            <i class="fa-solid fa-eye"></i>
-        </button>
-    </form> -->
 </div>
