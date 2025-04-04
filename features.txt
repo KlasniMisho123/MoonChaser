@@ -17,3 +17,6 @@ moonPhases.jpg
 
 1. button?
 2. logo?
+
+--🌙Skils To Work on🌙 --
+property binding? input etc

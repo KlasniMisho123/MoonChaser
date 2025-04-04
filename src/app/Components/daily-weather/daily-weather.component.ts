@@ -12,8 +12,8 @@ import { FormsModule } from '@angular/forms';
 export class DailyWeatherComponent {
   inputedCity: string = ""
 
-  getWeather(city:string):void {
-    this.inputedCity = city
-    console.log(city)
+  getWeather(cityName:string):void {
+    this.inputedCity = cityName
+    console.log(cityName)
   }
 }
