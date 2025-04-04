@@ -1,8 +1,7 @@
 Weather App – Fetch weather data from an API a
 nd display it dynamically with Angular components.
 
-
-If you go with MoonChaser, you could:
+API - https://www.weatherapi.com/api-explorer.aspx
 
 Add moon phase tracking 🌑🌕
 
@@ -12,4 +11,4 @@ Show sunrise/sunset times 🌅
 
 Use a dark-themed UI for a sleek look 🌌
 
-https://blaze.ge/ - intro
+Forecast - 7 days.
