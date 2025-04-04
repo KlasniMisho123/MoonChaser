@@ -11,10 +11,13 @@
         [ngClass]="currentWeatherSection==='Weekly'? ' pb-1 border-b-1 border-blue-500 text-blue-400': 'text-white' "
         > Weekly
         </div>
-
+    </div>
+    <div class="bg-red-400" *ngIf="currentWeatherSection==='Daily'">
         <app-daily-weather></app-daily-weather>
+    </div>
+    <div class="bg-red-400" *ngIf="currentWeatherSection==='Weekly'">
         <app-weekly-weather></app-weekly-weather>
     </div>
-
+    
    
 </div>
