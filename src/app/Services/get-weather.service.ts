@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { SimpleWeatherResponse } from '../model/interface/weather';
 import { environment } from '../../environments/environments.service';
 
-// API KEY:92c4065289c84a2cb1982555250504
 @Injectable({
   providedIn: 'root'
 })
@@ -19,5 +18,5 @@ export class GetWeatherService {
   getWeeklyWeather(cityName: string):Observable<any> {
     return this.http.get<any>(environment.FORECAST_WEATHER_API_URL_BASE + `${cityName}&days=7&aqi=no&alerts=no`)
   }
-  // API RESPONSE MODEL
+  // Weekly API RESPONSE MODEL
 }
