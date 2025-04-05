@@ -16,18 +16,16 @@ export class DailyWeatherComponent {
 
   weatherService = inject(GetWeatherService)
 
-  getWeather(cityName:string):void {
-    this.inputedCity = cityName
-    console.log(cityName)
-  }
+  // getWeather(cityName:string):void {
+  //   this.inputedCity = cityName
+  //   console.log(cityName)
+  // }
 
-  getDailyWeather() {
-    this.weatherService.getDailyWeather("Tbilisi").subscribe((res: any) => {
-      if(res.result) {
-        alert("RES EXISTS")
-      } else {
-        alert("RES DOESNOT EXISTS")
-      }
+  getDailyWeather(inputedCity: string) {
+    console.log(inputedCity)
+    debugger;
+    this.weatherService.getDailyWeather("tbilisi").subscribe((res: any) => {
+      console.log(res)
     })
   }
 }
