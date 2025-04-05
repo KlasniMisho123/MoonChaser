@@ -18,10 +18,11 @@ moonPhases.jpg
 1. button?
 2. logo?
 
---🌙Skils To Work on🌙 --
+-- Skils To Work on 🎯 --
 property binding? input etc
 
--- Workon -- 
+-- Workon 🎯-- 
 // API RESPONSE MODEL
-// API KEY:92c4065289c84a2cb1982555250504
-Const APi
+
+-- Errors 🚩--
+Environment - .env process not defiend / Environment.service setup??
