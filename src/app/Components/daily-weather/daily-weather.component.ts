@@ -13,18 +13,15 @@ import { GetWeatherService } from '../../Services/get-weather.service';
 })
 export class DailyWeatherComponent {
   inputedCity: string = ""
-
+  currentTemC: number = 0
   weatherService = inject(GetWeatherService)
 
-  async getDailyWeather(inputedCity: string) {
+  getDailyWeather(inputedCity: string) {
      // debugger;
-     try{ 
-        await this.weatherService.getDailyWeather(inputedCity).subscribe((res: any) => {
-        console.log(res)
+        this.weatherService.getDailyWeather(inputedCity).subscribe((res: any) => {
+          console.log(res)
+          this.currentTemC = res.current.temp_c
         })
-        // Clear InputedCity
-      } catch(err) {
-        console.log(err)
-      }
+      // Clear InputedCity
   }
 }
