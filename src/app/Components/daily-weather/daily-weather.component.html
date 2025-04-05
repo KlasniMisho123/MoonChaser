@@ -12,32 +12,32 @@
          </div>
          <div class="flex flex-col  items-center border-1 border-gray-400 p-4 py-6 rounded gap-8 transition-all transition-duration-300  hover:shadow-lg ">
             <i class="fa-solid fa-tornado text-5xl text-gray-500 py-4 "></i>
-            <p class="max-w-[225px] text-sm sm:text-base ">Unlock detailed forecasts and weather stats, presented with clarity and style.</p>
+            <p class="max-w-[225px] text-sm sm:text-base ">Get detailed forecasts and weather stats, presented with clarity and style.</p>
          </div>
      </div>
 </div>
 <div class="flex justify-center "> 
     <!-- Work on Property Binding -->
     <form  #form="ngForm" class="flex flex-col justify-center mt-12 gap-8">
-        <div class="text-red-400 text-sm mt-1" *ngIf="inputedCityRef.touched && inputedCityRef.invalid">
-            <span *ngIf="inputedCityRef.errors?.['required']">🚩 City is required.</span>
-          </div>
-        <input 
-        #inputedCityRef="ngModel"
-        type="text" 
-        name="inputedCity"
-        [(ngModel)]="inputedCity"
-        required
-        placeholder="City"
-        class="bg-gray-700 border-b-1 rounded border-gray-100 text-white placeholder-gray-500 py-2 px-3 text-sm lg:text-base 
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+            <div class="text-red-400 text-base mt-1" *ngIf="inputedCityRef.touched && inputedCityRef.invalid">
+                <span *ngIf="inputedCityRef.errors?.['required']">🚩 City Is Required.</span>
+            </div>
+            <input 
+            #inputedCityRef="ngModel"
+            type="text" 
+            name="inputedCity"
+            [(ngModel)]="inputedCity"
+            required
+            placeholder="City"
+            class="bg-gray-700 border-b-1 rounded border-gray-100 text-white placeholder-gray-500 py-2 px-3 text-sm lg:text-base 
+            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
 
-        <button 
-        (click)="getWeather(inputedCity)"
-        class="bg-white text-blue-600 py-2 px-6 rounded-full text-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300 
-        focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-opacity-50 relative cursor-pointer hover:opacity-90">
-            Get Current Weather
-            <i class="fa-solid fa-eye"></i>
-        </button>
+            <button 
+            (click)="getWeather(inputedCity)"
+            class="bg-white text-blue-600 mt-6 py-2 px-6 rounded-full text-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300 
+            focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-opacity-50 relative cursor-pointer hover:opacity-90">
+                Get Current Weather
+                <i class="fa-solid fa-eye"></i>
+            </button>
     </form>
 </div>
