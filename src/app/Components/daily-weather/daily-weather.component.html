@@ -19,7 +19,7 @@
 <div class="flex justify-center "> 
     <!-- Work on Property Binding -->
     <form  #form="ngForm" class="flex flex-col justify-center mt-12 gap-8">
-            <div class="text-red-400 text-base mt-1" *ngIf="inputedCityRef.touched && inputedCityRef.invalid">
+            <div class="text-red-400 text-sm md:text-base mt-1" *ngIf="inputedCityRef.touched && inputedCityRef.invalid">
                 <span *ngIf="inputedCityRef.errors?.['required']">🚩 City Is Required.</span>
             </div>
             <input 
