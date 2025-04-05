@@ -16,12 +16,18 @@ export class DailyWeatherComponent {
   currentTemC: number = 0
   weatherService = inject(GetWeatherService)
 
-  getDailyWeather(inputedCity: string) {
+  getDailyWeather(inputedCity: string):void {
      // debugger;
         this.weatherService.getDailyWeather(inputedCity).subscribe((res: any) => {
-          console.log(res)
+          console.log("Current Weather Res: ", res)
           this.currentTemC = res.current.temp_c
         })
       // Clear InputedCity
+  }
+
+  getWeeklyWeather(inputedCity: string):void {
+    this.weatherService.getWeeklyWeather(inputedCity).subscribe((res: any) =>{
+      console.log("Weekly Weather Res: ", res)
+    })
   }
 }
