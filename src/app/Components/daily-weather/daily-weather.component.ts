@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { GetWeatherService } from '../../Services/get-weather.service';
 
 
 @Component({
@@ -13,12 +14,20 @@ import { FormsModule } from '@angular/forms';
 export class DailyWeatherComponent {
   inputedCity: string = ""
 
+  weatherService = inject(GetWeatherService)
+
   getWeather(cityName:string):void {
     this.inputedCity = cityName
     console.log(cityName)
   }
 
   getDailyWeather() {
-    
+    this.weatherService.getDailyWeather("Tbilisi").subscribe((res: any) => {
+      if(res.result) {
+        alert("RES EXISTS")
+      } else {
+        alert("RES DOESNOT EXISTS")
+      }
+    })
   }
 }
