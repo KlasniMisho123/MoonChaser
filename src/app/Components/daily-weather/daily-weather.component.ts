@@ -12,8 +12,8 @@ import { GetWeatherService } from '../../Services/get-weather.service';
   styleUrl: './daily-weather.component.css'
 })
 export class DailyWeatherComponent {
-  inputedCity: string = ""
-  currentTemC: number = 0
+  inputedCity: string = "";
+  currentTemC: number = 0;
   weatherService = inject(GetWeatherService)
 
   getDailyWeather(inputedCity: string):void {
