@@ -16,16 +16,15 @@ export class DailyWeatherComponent {
 
   weatherService = inject(GetWeatherService)
 
-  // getWeather(cityName:string):void {
-  //   this.inputedCity = cityName
-  //   console.log(cityName)
-  // }
-
-  getDailyWeather(inputedCity: string) {
-    console.log(inputedCity)
-    // debugger;
-    this.weatherService.getDailyWeather("tbilisi").subscribe((res: any) => {
-      console.log(res)
-    })
+  async getDailyWeather(inputedCity: string) {
+     // debugger;
+     try{ 
+        await this.weatherService.getDailyWeather(inputedCity).subscribe((res: any) => {
+        console.log(res)
+        })
+        // Clear InputedCity
+      } catch(err) {
+        console.log(err)
+      }
   }
 }
