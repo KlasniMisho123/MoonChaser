@@ -13,11 +13,11 @@ export class GetWeatherService {
   http = inject(HttpClient)
 
   getDailyWeather(cityName: string):Observable<SimpleWeatherResponse> {
-    return this.http.get<SimpleWeatherResponse>(environment.WEATHER_API_URL_BASE + `${cityName}&aqi=no`)
+    return this.http.get<SimpleWeatherResponse>(environment.CURRENT_WEATHER_API_URL_BASE + `${cityName}&aqi=no`)
   }
   
   getWeeklyWeather(cityName: string):Observable<any> {
-    return this.http.get<any>(`http://api.weatherapi.com/v1/forecast.json?key=92c4065289c84a2cb1982555250504&q=${cityName}&days=7&aqi=no&alerts=no`)
+    return this.http.get<any>(environment.FORECAST_WEATHER_API_URL_BASE + `${cityName}&days=7&aqi=no&alerts=no`)
   }
   // API RESPONSE MODEL
 }

@@ -1,16 +1,3 @@
-import { TestBed } from '@angular/core/testing';
-
-import { EnvironmentsService } from './environments.service';
-
-describe('EnvironmentsService', () => {
-  let service: EnvironmentsService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(EnvironmentsService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+export const environment = {
+  WEATHER_API_URL_BASE: "http://api.weatherapi.com/v1/current.json?key=92c4065289c84a2cb1982555250504&q="
+}
