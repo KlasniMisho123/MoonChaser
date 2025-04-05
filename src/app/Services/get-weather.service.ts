@@ -11,7 +11,9 @@ export class GetWeatherService {
   http = inject(HttpClient)
 
   getDailyWeather(cityName: string):Observable<any> {
-    return this.http.get<any>(`http://api.weatherapi.com/v1/current.json?key=92c4065289c84a2cb1982555250504&q=${{cityName}}}&aqi=no`)
+    return this.http.get<any>(`http://api.weatherapi.com/v1/current.json?key=92c4065289c84a2cb1982555250504&q=${cityName}&aqi=no`)
+    // return this.http.get<any>(`http://api.weatherapi.com/v1/current.json?key=92c4065289c84a2cb1982555250504&q=London&aqi=no`)
+    // return this.http.get<any>(`http://api.weatherapi.com/v1/current.json?key=92c4065289c84a2cb1982555250504&q=${{cityName}}&aqi=no`)
   }
   
   // return this.http.get<any>("http://api.weatherapi.com/v1/current.json?" + "key" + cityName )

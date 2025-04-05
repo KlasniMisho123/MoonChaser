@@ -23,7 +23,7 @@ export class DailyWeatherComponent {
 
   getDailyWeather(inputedCity: string) {
     console.log(inputedCity)
-    debugger;
+    // debugger;
     this.weatherService.getDailyWeather("tbilisi").subscribe((res: any) => {
       console.log(res)
     })
