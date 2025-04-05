@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-weekly-weather',
@@ -12,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class WeeklyWeatherComponent {
   inputedCity:string = "";
-  currentTemperature = 0;
+  currentTemC:number = 0;
 
   weatherService = inject(GetWeatherService)
 
@@ -20,5 +19,6 @@ export class WeeklyWeatherComponent {
     this.weatherService.getWeeklyWeather(inputedCity).subscribe((res: any) => {
       console.log(res)
     })
+     // Clear InputedCity
   }
 }
