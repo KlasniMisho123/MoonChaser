@@ -110,7 +110,7 @@
             >
                  <div class="text-sm md:text-base text-center ">{{ day.date | date:'EEE' }}</div>
                  <img class="h-[60px] w-[60px]" [src]="day.day.condition.icon" alt="Weather Icon">
-                 <div class="font-bold text-sm">{{day.day.maxtemp_c}}° <span class="font-normal text-gray-600"> {{day.day.mintemp_c}}°</span></div>
+                 <div class="font-bold text-sm">{{infoInC ? day.day.maxtemp_c : day.day.maxtemp_f}}° <span class="font-normal text-gray-600"> {{infoInC? day.day.mintemp_c : day.day.mintemp_f }}°</span></div>
            </button>
        </div>
     </div>
