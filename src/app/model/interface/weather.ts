@@ -31,6 +31,10 @@ export interface SimpleWeatherResponse {
         {
           date: string;
           day: {
+            maxtemp_c: number;
+            maxtemp_f: number;
+            mintemp_c: number;
+            mintemp_f: number;
             temp_c: number;
             temp_f: number;
             humidity: number;
