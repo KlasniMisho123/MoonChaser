@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SevenDaysForecast } from '../../model/interface/weather';
 
 @Component({
   selector: 'app-weekly-weather',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class WeeklyWeatherComponent {
   inputedCity:string = "";
   weatherSectionActive: string = "false"
-
+  weatherInfo!: SevenDaysForecast;
   weatherService = inject(GetWeatherService)
 
   getWeeklyWeather(inputedCity:string):void {
@@ -20,6 +21,7 @@ export class WeeklyWeatherComponent {
       next: (res: any) => {
         this.weatherSectionActive = "active"
         console.log(res)
+        // 
       }, 
       error: (err) => {
         this.weatherSectionActive = "invalid"
