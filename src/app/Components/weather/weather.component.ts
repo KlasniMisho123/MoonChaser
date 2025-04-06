@@ -11,10 +11,11 @@ import { DailyWeatherComponent } from '../daily-weather/daily-weather.component'
 })
 export class WeatherComponent {
 
-  currentWeatherSection: string = "Daily"
+  currentWeatherSection: string = localStorage.getItem('currentWeatherSection') || "Daily"
 
   setWeatherSection(section:string): void {
     this.currentWeatherSection = section
+    localStorage.setItem('currentWeatherSection', section);
   }
 
 }

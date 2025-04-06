@@ -25,7 +25,7 @@ property binding? input etc
 // API RESPONSE MODEL
 
 -- Errors 🚩--
-Environment - .env process not defiend / Environment.service setup??
+
 
 --- To Add 🎯---
 ~ fonts
@@ -34,4 +34,5 @@ Environment - .env process not defiend / Environment.service setup??
 ~ to save current/ forecast weather section localstorage
 
 --- Questions Bg ---
-~weekly-Weather shi amokomentarebul iSevenDaysForecast interface, rogor unda gamomekenebina
+~ weekly-Weather shi amokomentarebul iSevenDaysForecast interface, rogor unda gamomekenebina
+~ Environment - .env process not defiend / Environment.service setup??
