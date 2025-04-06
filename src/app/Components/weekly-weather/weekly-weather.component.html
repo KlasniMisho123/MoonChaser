@@ -77,14 +77,10 @@
                 <div class="text-sm md:text-base text-gray-600">{{weatherInfo.current.condition.text}}</div>
             </div>
           </div>
-        <div *ngFor="let day of weatherInfo.forecast.forecastday; let i =">
-            <div>Day {{ i + 1 }}: {{ day.date }}</div>
-              <div>
-                Temp: {{ day.day.temp_c }}°C
-              </div>
-              <div>
-                Condition: {{ day.day.condition.text }}
-              </div>
+        <div class="flex justify-evenly my-1  bg-red-200" *ngFor="let day of weatherInfo.forecast.forecastday; let i = index">
+                <div >Day {{ i + 1 }}: {{ day.date }}</div>
+                <div>Temp: {{ day.day.temp_c }}°C</div>
+                <div>Condition: {{ day.day.condition.text }}</div>
         </div>
     </div>
     <div *ngIf="weatherSectionActive === 'invalid'"  class="mx-auto mt-8 bg-yellow-100 p-8 w-[50%] text-black rounded border-2 border-yellow-500">

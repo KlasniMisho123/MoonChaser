@@ -31,3 +31,4 @@ Environment - .env process not defiend / Environment.service setup??
 ~ fonts
 ~ Icon Module? gets Weather Text and returns custom icons
 ~ Error handle, invalid cityName -> constant
+~ to save current/ forecast weather section localstorage
