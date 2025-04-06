@@ -24,19 +24,11 @@ export class DailyWeatherComponent {
     this.infoInC = infoType
   }
 
-  clearInput():void {
-    this.inputedCity = ""
-  }
-
-
 
   getDailyWeather(inputedCity: string):void {
-    // debugger;
         this.weatherService.getDailyWeather(inputedCity).subscribe({
           next: (res: any) => {
             this.weatherSectionActive = "active"
-            console.log("Current Weather Res:", res);
-
             this.weatherInfo = {
               location: {
                 name: res.location.name,
@@ -66,7 +58,6 @@ export class DailyWeatherComponent {
           },
           error: (err) => {
             this.weatherSectionActive = "invalid"
-            console.log("ERROR");
           }
           })
   }
