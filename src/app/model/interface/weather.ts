@@ -58,6 +58,7 @@ export interface SimpleWeatherResponse {
   }
 export interface TargetedWeekDay {
   icon: string;
+  date:string;
   avgtemp_c: number;
   avgtemp_f: number;
   totalprecip_mm: number;

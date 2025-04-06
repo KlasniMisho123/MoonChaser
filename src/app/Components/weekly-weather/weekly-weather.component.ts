@@ -36,6 +36,7 @@ export class WeeklyWeatherComponent {
         this.weatherInfo = res;
 
         this.targetedWeekDay = {
+          date: res.forecast.forecastday[this.selectDisplayDay].date,
           icon: res.forecast.forecastday[this.selectDisplayDay].day.condition.icon,
           avgtemp_c: res.forecast.forecastday[this.selectDisplayDay].day.avgtemp_c,
           avgtemp_f: res.forecast.forecastday[this.selectDisplayDay].day.avgtemp_f,
@@ -59,6 +60,7 @@ export class WeeklyWeatherComponent {
     const selectedDay = this.weatherInfo.forecast.forecastday[index].day;
 
     this.targetedWeekDay = {
+    date: this.weatherInfo.forecast.forecastday[index].date,
     icon: selectedDay.condition.icon,
     avgtemp_c: selectedDay.avgtemp_c,
     avgtemp_f: selectedDay.avgtemp_f,
