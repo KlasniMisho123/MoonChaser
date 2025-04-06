@@ -56,10 +56,10 @@
                     <div>|</div>
                     <button class="cursor-pointer font-bold">°F</button>
                 </div>
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="flex flex-col">
+                    <span class="text-sm text-gray-600">Precipitation: {{weatherInfo.current.precip_mm}} mm</span>
+                    <span class="text-sm text-gray-600">Humidity: {{weatherInfo.current.humidity}} %</span>
+                    <span class="text-sm text-gray-600">Wind: {{weatherInfo.current.wind_kph}} km/h</span>
                 </div>
             </div>
             <div class="flex flex-col items-center">
