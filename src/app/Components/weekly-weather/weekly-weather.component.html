@@ -77,10 +77,8 @@
                 <div class="text-sm md:text-base text-gray-600">{{weatherInfo.current.condition.text}}</div>
             </div>
           </div>
-        <div *ngFor="ley day of weatherInfo.forecast.forecastday">
-            <div>
-                {{ day.date }}
-              </div>
+        <div *ngFor="let day of weatherInfo.forecast.forecastday; let i =">
+            <div>Day {{ i + 1 }}: {{ day.date }}</div>
               <div>
                 Temp: {{ day.day.temp_c }}°C
               </div>
