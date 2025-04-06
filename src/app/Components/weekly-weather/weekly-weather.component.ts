@@ -24,7 +24,7 @@ export class WeeklyWeatherComponent {
         this.weatherSectionActive = "active"
       }, 
       error: (err) => {
-        console.log(err)
+        this.weatherSectionActive = "invalid"
       }
     })
   }
