@@ -79,14 +79,14 @@
               <div class="flex flex-col">
                 <span class="text-sm text-gray-600">
                   Precipitation: 
-                  {{ infoInC ? targetedWeekDay.precip_mm + ' mm' : targetedWeekDay.precip_in + ' in' }}
+                  {{ infoInC ? targetedWeekDay.totalprecip_mm + ' mm' : targetedWeekDay.totalprecip_in + ' in' }}
                 </span>
                 <span class="text-sm text-gray-600">
-                  Humidity: {{ targetedWeekDay.humidity }}%
+                  Humidity: {{ targetedWeekDay.avghumidity }}%
                 </span>
                 <span class="text-sm text-gray-600">
                   Wind: 
-                  {{ infoInC ? targetedWeekDay.wind_kph + ' km/h' : targetedWeekDay.wind_mph + ' mph' }}
+                  {{ infoInC ? targetedWeekDay.maxwind_kph + ' km/h' : targetedWeekDay.maxwind_mph + ' mph' }}
                 </span>
               </div>
             </div>
