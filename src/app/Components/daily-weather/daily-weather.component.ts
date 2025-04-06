@@ -27,9 +27,10 @@ export class DailyWeatherComponent {
         this.clearInfo()
         this.weatherService.getDailyWeather(inputedCity).subscribe({
           next: (res: any) => {
-            this.weatherSectionActive = "true"
+            this.weatherSectionActive = "active"
             console.log("Current Weather Res:", res);
             this.currentTemC = res.current.temp_c;
+            this.inputedCity = inputedCity
           },
           error: (err) => {
             this.weatherSectionActive = "invalid"

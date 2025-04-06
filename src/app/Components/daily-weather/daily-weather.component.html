@@ -40,10 +40,11 @@
                 <i class="fa-solid fa-eye"></i>
             </button>
 
-            <div *ngIf="weatherSectionActive==='active' ">
-                <div> WeatherSectionIsActive </div>
-                <div> CURRENT TEMP: {{currentTemC}}</div>
-            </div>
-            <div *ngIf="weatherSectionActive==='invalid' ">Invalid City Name</div>
-    </form>
-</div>
+        </form>
+    </div>
+    <!-- <div class="bg-white p-4 " *ngIf="weatherSectionActive==='active' "> -->
+    <div class="mx-auto mt-8 bg-white p-4 w-[80%] text-black rounded">
+        <div> Weather Results for <span class="font-bold"> {{inputedCity}} </span> </div>
+        <div> CURRENT TEMP: {{currentTemC}}</div>
+    </div>
+    <div *ngIf="weatherSectionActive==='invalid' ">Invalid City Name</div>
