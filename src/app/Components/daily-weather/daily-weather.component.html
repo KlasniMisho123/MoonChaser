@@ -40,8 +40,10 @@
                 <i class="fa-solid fa-eye"></i>
             </button>
 
-            <div> CURRENT TEMP: {{currentTemC}}</div>
-
-            <div> Style Weather  </div>
+            <div *ngIf="weatherSectionActive==='active' ">
+                <div> WeatherSectionIsActive </div>
+                <div> CURRENT TEMP: {{currentTemC}}</div>
+            </div>
+            <div *ngIf="weatherSectionActive==='invalid' ">Invalid City Name</div>
     </form>
 </div>

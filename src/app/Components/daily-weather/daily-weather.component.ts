@@ -14,20 +14,30 @@ import { GetWeatherService } from '../../Services/get-weather.service';
 export class DailyWeatherComponent {
   inputedCity: string = "";
   currentTemC: number = 0;
-  weatherService = inject(GetWeatherService)
+  weatherSectionActive: string= "false";
+  weatherService = inject(GetWeatherService);
+
+
+  clearInfo() {
+    this.currentTemC = 0;
+  }
 
   getDailyWeather(inputedCity: string):void {
-     // debugger;
-        this.weatherService.getDailyWeather(inputedCity).subscribe((res: any) => {
-          console.log("Current Weather Res: ", res)
-          this.currentTemC = res.current.temp_c
-        })
+    // debugger;
+        this.clearInfo()
+        this.weatherService.getDailyWeather(inputedCity).subscribe({
+          next: (res: any) => {
+            this.weatherSectionActive = "true"
+            console.log("Current Weather Res:", res);
+            this.currentTemC = res.current.temp_c;
+          },
+          error: (err) => {
+            this.weatherSectionActive = "invalid"
+            console.log("ERROR");
+          }
+          })
+
       // Clear InputedCity
   }
 
-  getWeeklyWeather(inputedCity: string):void {
-    this.weatherService.getWeeklyWeather(inputedCity).subscribe((res: any) =>{
-      console.log("Weekly Weather Res: ", res)
-    })
-  }
 }
