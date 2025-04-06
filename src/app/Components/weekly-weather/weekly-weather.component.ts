@@ -46,7 +46,6 @@ export class WeeklyWeatherComponent {
           maxwind_mph: res.forecast.forecastday[this.selectDisplayDay].day.maxwind_mph,
           text: res.forecast.forecastday[this.selectDisplayDay].day.condition.text
         };
-        console.log(res);        
       },
       error: (err) => {
         this.weatherSectionActive = "invalid";
