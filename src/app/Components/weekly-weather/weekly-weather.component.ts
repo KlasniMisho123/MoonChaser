@@ -34,7 +34,7 @@ export class WeeklyWeatherComponent {
 
   getWeeklyWeather(inputedCity: string): void {
     this.weatherService.getWeeklyWeather(inputedCity).subscribe({
-      next: (res: SevenDaysForecast) => {
+      next: (res: any) => {
         this.weatherSectionActive = "active";
         this.selectDisplayDay = 0;
 
