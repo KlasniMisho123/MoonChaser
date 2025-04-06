@@ -2,6 +2,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GetWeatherService } from '../../Services/get-weather.service';
+import { SimpleWeatherResponse } from '../../model/interface/weather';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class DailyWeatherComponent {
   weatherSectionActive: string= "false";
   weatherService = inject(GetWeatherService);
   currentDate = new Date()
+  weatherInfo!: SimpleWeatherResponse;
 
   clearInfo() {
     this.currentTemC = 0;
@@ -30,7 +32,29 @@ export class DailyWeatherComponent {
             this.weatherSectionActive = "active"
             console.log("Current Weather Res:", res);
             this.currentTemC = res.current.temp_c;
-            this.inputedCity = inputedCity
+
+            this.weatherInfo = {
+              location: {
+                name: res.location.name,
+                country: res.location.country,
+                localtime: res.location.localtime
+              },
+              current: {
+                temp_c: res.current.temp_c,
+                humidity: res.current.humidity,
+                condition: {
+                  text: res.current.condition.text,
+                  icon: res.current.condition.icon
+                },
+                wind_kph: res.current.wind_kph,
+                wind_degree: res.current.wind_degree,
+                wind_dir: res.current.wind_dir,
+                cloud: res.current.cloud,
+                feelslike_c: res.current.feelslike_c,
+                windchill_c: res.current.windchill_c
+              }
+            };
+
           },
           error: (err) => {
             this.weatherSectionActive = "invalid"
