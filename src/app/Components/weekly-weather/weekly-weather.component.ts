@@ -28,6 +28,8 @@ export class WeeklyWeatherComponent {
   selectWeekDay(index:number) {
     this.selectDisplayDay = index
     console.log(index)
+
+
   }
 
   getWeeklyWeather(inputedCity: string): void {
@@ -35,30 +37,25 @@ export class WeeklyWeatherComponent {
       next: (res: SevenDaysForecast) => {
         this.weatherSectionActive = "active";
         this.selectDisplayDay = 0;
-        
+
+        this.weatherInfo = res;
+
         this.targetedWeekDay = {
-          icon : "number",
-          temp_c: "number",
-          temp_f: "number",
-          precip_mm: "number",
-          precip_in: "number",
-          humidity: "number",
-          wind_kph: "number",
-          wind_mph: "number",
-          currentDate: "number",
-          text: "number"
+          icon : res.current.condition.icon,
+          temp_c: res.current.temp_c,
+          temp_f: res.current.temp_f,
+          precip_mm: res.current.precip_mm,
+          precip_in: res.current.precip_in,
+          humidity: res.current.humidity,
+          wind_kph: res.current.wind_kph,
+          wind_mph: res.current.wind_mph,
+          text: res.current.condition.text
         }
-        // [src]="'https:' + weatherInfo.current.condition.icon"
-        // {{infoInC? weatherInfo.current.temp_c : weatherInfo.current.temp_f}}
-        // {{infoInC? weatherInfo.current.precip_mm  + ' mm' : weatherInfo.current.precip_in + ' in'}}
-        // {{weatherInfo.current.humidity}}
-        // {{infoInC? weatherInfo.current.wind_kph + ' km/h' : weatherInfo.current.wind_mph + ' mph'}}
-        // {{ currentDate | date:'mediumDate' }
-        // {{weatherInfo.current.condition.text}}
+
         console.log(res);
   
         // Store only the forecast days
-        this.weatherInfo = res;
+        
       },
       error: (err) => {
         this.weatherSectionActive = "invalid";
