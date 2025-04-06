@@ -16,17 +16,33 @@ export class WeeklyWeatherComponent {
   weatherInfo!: SevenDaysForecast;
   weatherService = inject(GetWeatherService)
 
-  getWeeklyWeather(inputedCity:string):void {
+  getWeeklyWeather(inputedCity: string): void {
     this.weatherService.getWeeklyWeather(inputedCity).subscribe({
-      next: (res: any) => {
-        this.weatherSectionActive = "active"
-        console.log(res)
-        // 
-      }, 
+      next: (res: SevenDaysForecast) => {
+        this.weatherSectionActive = "active";
+        console.log(res);
+  
+        // Store only the forecast days
+        this.weatherInfo = res;
+      },
       error: (err) => {
-        this.weatherSectionActive = "invalid"
+        this.weatherSectionActive = "invalid";
       }
-    })
+    });
   }
 }
 
+
+// this.weatherInfo = {
+//   daily: res.forecast.forecastday.map((day: any) => ({
+//     date: day.date,
+//     temp_c: day.day.avgtemp_c,
+//     feelslike_c: day.day.feelslike_c ?? day.day.avgtemp_c,
+//     wind_kph: day.day.maxwind_kph,
+//     cloud: day.day.avghumidity, // or `day.day.cloud` if it's there
+//     condition: {
+//       text: day.day.condition.text,
+//       icon: day.day.condition.icon
+//     }
+//   }))
+// };
