@@ -18,7 +18,7 @@ moonPhases.jpg
 1. button?
 2. logo?
 
--- Skils To Work on 🎯 --
+-- Skils To Work on 🎯--
 property binding? input etc
 
 -- Workon 🎯-- 
@@ -27,5 +27,6 @@ property binding? input etc
 -- Errors 🚩--
 Environment - .env process not defiend / Environment.service setup??
 
--- add --
-fonts
+--- To Add 🎯---
+~ fonts
+~ Icon Module? gets Weather Text and returns custom icons

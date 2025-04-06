@@ -16,6 +16,8 @@ export interface SimpleWeatherResponse {
          text: string,
          icon: string,
       },
+      precip_mm: number,
+      precip_in: number,
       wind_kph: number,
       wind_mph: number,
       wind_degree: number,

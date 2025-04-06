@@ -46,6 +46,8 @@ export class DailyWeatherComponent {
                   text: res.current.condition.text,
                   icon: res.current.condition.icon
                 },
+                precip_mm: res.current.precip_mm,
+                precip_in: res.current.precip_in,
                 wind_kph: res.current.wind_kph,
                 wind_mph: res.current.wind_mph,
                 wind_degree: res.current.wind_degree,
