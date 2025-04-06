@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, DatePipe } from '@angular/common';
-import { SevenDaysForecast } from '../../model/interface/weather';
+import { SevenDaysForecast, TargetedWeekDay } from '../../model/interface/weather';
 
 @Component({
   selector: 'app-weekly-weather',
@@ -19,7 +19,7 @@ export class WeeklyWeatherComponent {
   infoInC: boolean = true;
   selectDisplayDay!: number;
 
-  targetedWeekDay: {} = {}
+  targetedWeekDay!: TargetedWeekDay;
 
   changeInfoType(infoType:boolean):void {
     this.infoInC = infoType
