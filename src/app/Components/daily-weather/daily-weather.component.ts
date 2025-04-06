@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GetWeatherService } from '../../Services/get-weather.service';
@@ -7,7 +7,7 @@ import { GetWeatherService } from '../../Services/get-weather.service';
 @Component({
   selector: 'app-daily-weather',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, DatePipe],
   templateUrl: './daily-weather.component.html',
   styleUrl: './daily-weather.component.css'
 })
@@ -16,7 +16,7 @@ export class DailyWeatherComponent {
   currentTemC: number = 0;
   weatherSectionActive: string= "false";
   weatherService = inject(GetWeatherService);
-
+  currentDate = new Date()
 
   clearInfo() {
     this.currentTemC = 0;
