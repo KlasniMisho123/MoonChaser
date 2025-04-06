@@ -10,12 +10,14 @@ export interface SimpleWeatherResponse {
     };
     current: {
       temp_c: number;
+      temp_f: number,
       humidity: number;
       condition: {
          text: string,
          icon: string,
       },
       wind_kph: number,
+      wind_mph: number,
       wind_degree: number,
       wind_dir: string,
       cloud: number,
