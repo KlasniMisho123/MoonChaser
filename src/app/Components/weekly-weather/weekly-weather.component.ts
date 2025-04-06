@@ -13,7 +13,8 @@ import { SevenDaysForecast, TargetedWeekDay } from '../../model/interface/weathe
 export class WeeklyWeatherComponent {
   inputedCity:string = "";
   weatherSectionActive: string = "false"
-  weatherInfo!: SevenDaysForecast;
+  // weatherInfo!: SevenDaysForecast;
+  weatherInfo!: any;
   currentDate = new Date()
   weatherService = inject(GetWeatherService)
   infoInC: boolean = true;
@@ -25,16 +26,10 @@ export class WeeklyWeatherComponent {
     this.infoInC = infoType
   }
 
-  selectWeekDay(index:number) {
-    this.selectDisplayDay = index
-    console.log(index)
-
-
-  }
-
   getWeeklyWeather(inputedCity: string): void {
     this.weatherService.getWeeklyWeather(inputedCity).subscribe({
       next: (res: any) => {
+      // next: (res: SevenDaysForecast) => {
         this.weatherSectionActive = "active";
         this.selectDisplayDay = 0;
 
@@ -51,21 +46,6 @@ export class WeeklyWeatherComponent {
           maxwind_mph: res.forecast.forecastday[this.selectDisplayDay].day.maxwind_mph,
           text: res.forecast.forecastday[this.selectDisplayDay].day.condition.text
         };
-        
-        
-        
-        // this.targetedWeekDay = {
-        //   icon : res.current.condition.icon,
-        //   temp_c: res.current.temp_c,
-        //   temp_f: res.current.temp_f,
-        //   precip_mm: res.current.precip_mm,
-        //   precip_in: res.current.precip_in,
-        //   humidity: res.current.humidity,
-        //   wind_kph: res.current.wind_kph,
-        //   wind_mph: res.current.wind_mph,
-        //   text: res.current.condition.text
-        // }
-
         console.log(res);        
       },
       error: (err) => {
@@ -73,19 +53,23 @@ export class WeeklyWeatherComponent {
       }
     });
   }
+
+  selectWeekDay(index:number): void {
+    this.selectDisplayDay = index
+
+    const selectedDay = this.weatherInfo.forecast.forecastday[index].day;
+
+    this.targetedWeekDay = {
+    icon: selectedDay.condition.icon,
+    avgtemp_c: selectedDay.avgtemp_c,
+    avgtemp_f: selectedDay.avgtemp_f,
+    totalprecip_mm: selectedDay.totalprecip_mm,
+    totalprecip_in: selectedDay.totalprecip_in,
+    avghumidity: selectedDay.avghumidity,
+    maxwind_kph: selectedDay.maxwind_kph,
+    maxwind_mph: selectedDay.maxwind_mph,
+    text: selectedDay.condition.text
+  };
+
+  }
 }
-
-
-// this.weatherInfo = {
-//   daily: res.forecast.forecastday.map((day: any) => ({
-//     date: day.date,
-//     temp_c: day.day.avgtemp_c,
-//     feelslike_c: day.day.feelslike_c ?? day.day.avgtemp_c,
-//     wind_kph: day.day.maxwind_kph,
-//     cloud: day.day.avghumidity, // or `day.day.cloud` if it's there
-//     condition: {
-//       text: day.day.condition.text,
-//       icon: day.day.condition.icon
-//     }
-//   }))
-// };
