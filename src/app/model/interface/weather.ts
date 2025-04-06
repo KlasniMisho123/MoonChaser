@@ -56,15 +56,14 @@ export interface SimpleWeatherResponse {
       ];
     };
   }
-
 export interface TargetedWeekDay {
-    icon: string;
-    temp_c: number;
-    temp_f: number;
-    precip_mm: number;
-    precip_in: number;
-    humidity: number;
-    wind_kph: number;
-    wind_mph: number;
-    text: string;
-  }
+  icon: string;
+  avgtemp_c: number;
+  avgtemp_f: number;
+  totalprecip_mm: number;
+  totalprecip_in: number;
+  avghumidity: number;
+  maxwind_kph: number;
+  maxwind_mph: number;
+  text: string;
+}

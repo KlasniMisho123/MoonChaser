@@ -41,16 +41,30 @@ export class WeeklyWeatherComponent {
         this.weatherInfo = res;
 
         this.targetedWeekDay = {
-          icon : res.current.condition.icon,
-          temp_c: res.current.temp_c,
-          temp_f: res.current.temp_f,
-          precip_mm: res.current.precip_mm,
-          precip_in: res.current.precip_in,
-          humidity: res.current.humidity,
-          wind_kph: res.current.wind_kph,
-          wind_mph: res.current.wind_mph,
-          text: res.current.condition.text
-        }
+          icon: res.forecast.forecastday[this.selectDisplayDay].day.condition.icon,
+          avgtemp_c: res.forecast.forecastday[this.selectDisplayDay].day.avgtemp_c,
+          avgtemp_f: res.forecast.forecastday[this.selectDisplayDay].day.avgtemp_f,
+          totalprecip_mm: res.forecast.forecastday[this.selectDisplayDay].day.totalprecip_mm,
+          totalprecip_in: res.forecast.forecastday[this.selectDisplayDay].day.totalprecip_in,
+          avghumidity: res.forecast.forecastday[this.selectDisplayDay].day.avghumidity,
+          maxwind_kph: res.forecast.forecastday[this.selectDisplayDay].day.maxwind_kph,
+          maxwind_mph: res.forecast.forecastday[this.selectDisplayDay].day.maxwind_mph,
+          text: res.forecast.forecastday[this.selectDisplayDay].day.condition.text
+        };
+        
+        
+        
+        // this.targetedWeekDay = {
+        //   icon : res.current.condition.icon,
+        //   temp_c: res.current.temp_c,
+        //   temp_f: res.current.temp_f,
+        //   precip_mm: res.current.precip_mm,
+        //   precip_in: res.current.precip_in,
+        //   humidity: res.current.humidity,
+        //   wind_kph: res.current.wind_kph,
+        //   wind_mph: res.current.wind_mph,
+        //   text: res.current.condition.text
+        // }
 
         console.log(res);        
       },
