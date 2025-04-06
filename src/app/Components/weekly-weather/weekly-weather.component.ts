@@ -35,8 +35,18 @@ export class WeeklyWeatherComponent {
       next: (res: SevenDaysForecast) => {
         this.weatherSectionActive = "active";
         this.selectDisplayDay = 0;
+        
         this.targetedWeekDay = {
-
+          icon : "number",
+          temp_c: "number",
+          temp_f: "number",
+          precip_mm: "number",
+          precip_in: "number",
+          humidity: "number",
+          wind_kph: "number",
+          wind_mph: "number",
+          currentDate: "number",
+          text: "number"
         }
         // [src]="'https:' + weatherInfo.current.condition.icon"
         // {{infoInC? weatherInfo.current.temp_c : weatherInfo.current.temp_f}}
