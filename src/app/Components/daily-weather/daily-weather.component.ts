@@ -27,7 +27,7 @@ export class DailyWeatherComponent {
 
   getDailyWeather(inputedCity: string):void {
         this.weatherService.getDailyWeather(inputedCity).subscribe({
-          next: (res: any) => {
+          next: (res: SimpleWeatherResponse) => {
             this.weatherSectionActive = "active"
             this.weatherInfo = {
               location: {

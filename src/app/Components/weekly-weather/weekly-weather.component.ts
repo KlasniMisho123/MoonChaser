@@ -11,14 +11,21 @@ import { CommonModule } from '@angular/common';
 })
 export class WeeklyWeatherComponent {
   inputedCity:string = "";
-  currentTemC:number = 0;
+  weatherSectionActive: string = "false"
 
   weatherService = inject(GetWeatherService)
 
   getWeeklyWeather(inputedCity:string):void {
-    this.weatherService.getWeeklyWeather(inputedCity).subscribe((res: any) => {
-      console.log(res)
+    // this.weatherService.getWeeklyWeather(inputedCity).subscribe((res: any) => {
+    //   console.log(res)
+    // })
+    this.weatherService.getWeeklyWeather(inputedCity).subscribe({
+      next: (res: any) => {
+        this.weatherSectionActive = "active"
+      }, 
+      error: (err) => {
+        console.log(err)
+      }
     })
-     // Clear InputedCity
   }
 }
