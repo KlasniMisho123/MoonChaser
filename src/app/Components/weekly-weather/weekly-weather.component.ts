@@ -16,12 +16,10 @@ export class WeeklyWeatherComponent {
   weatherService = inject(GetWeatherService)
 
   getWeeklyWeather(inputedCity:string):void {
-    // this.weatherService.getWeeklyWeather(inputedCity).subscribe((res: any) => {
-    //   console.log(res)
-    // })
     this.weatherService.getWeeklyWeather(inputedCity).subscribe({
       next: (res: any) => {
         this.weatherSectionActive = "active"
+        console.log(res)
       }, 
       error: (err) => {
         this.weatherSectionActive = "invalid"

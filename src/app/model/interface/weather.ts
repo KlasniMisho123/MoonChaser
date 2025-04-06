@@ -28,3 +28,8 @@ export interface SimpleWeatherResponse {
     };
   }
   
+  export interface SevenDaysForecast extends SimpleWeatherResponse {
+    forecast: {
+      
+    }
+  }
