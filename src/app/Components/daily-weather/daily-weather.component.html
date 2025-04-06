@@ -53,10 +53,12 @@
                 </div>
                 <div class="mx-2 my-4 flex self-start gap-1">
                     <button class="cursor-pointer font-bold"
+                    [ngClass]="infoInC ? 'text-blue-500 bg-blue-100 rounded px-1' : ''"
                     (click)="changeInfoType(true)"
                     >°C</button>
                     <div>|</div>
                     <button class="cursor-pointer font-bold"
+                    [ngClass]="!infoInC ? 'text-red-500 bg-red-100 rounded px-1' : ''"
                     (click)="changeInfoType(false)"
                     >°F</button>
                 </div>
