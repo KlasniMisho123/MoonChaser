@@ -14,7 +14,13 @@ export class WeeklyWeatherComponent {
   inputedCity:string = "";
   weatherSectionActive: string = "false"
   weatherInfo!: SevenDaysForecast;
+  currentDate = new Date()
   weatherService = inject(GetWeatherService)
+  infoInC: boolean = true;
+
+  changeInfoType(infoType:boolean):void {
+    this.infoInC = infoType
+  }
 
   getWeeklyWeather(inputedCity: string): void {
     this.weatherService.getWeeklyWeather(inputedCity).subscribe({
