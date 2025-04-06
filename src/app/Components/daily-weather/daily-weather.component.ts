@@ -31,8 +31,7 @@ export class DailyWeatherComponent {
           next: (res: any) => {
             this.weatherSectionActive = "active"
             console.log("Current Weather Res:", res);
-            this.currentTemC = res.current.temp_c;
-
+            
             this.weatherInfo = {
               location: {
                 name: res.location.name,
