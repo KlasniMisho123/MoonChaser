@@ -52,10 +52,7 @@ export class WeeklyWeatherComponent {
           text: res.current.condition.text
         }
 
-        console.log(res);
-  
-        // Store only the forecast days
-        
+        console.log(res);        
       },
       error: (err) => {
         this.weatherSectionActive = "invalid";
