@@ -13,16 +13,21 @@ import { SimpleWeatherResponse } from '../../model/interface/weather';
   styleUrl: './daily-weather.component.css'
 })
 export class DailyWeatherComponent {
-  inputedCity: string = "";
-  currentTemC: number = 0;
+  inputedCity:string = ""
   weatherSectionActive: string= "false";
   weatherService = inject(GetWeatherService);
   currentDate = new Date()
   weatherInfo!: SimpleWeatherResponse;
+  infoInC: boolean = true;
+
+  changeInfoType(infoType:boolean) {
+    this.infoInC = infoType
+  }
 
   clearInfo() {
-    this.currentTemC = 0;
   }
+
+
 
   getDailyWeather(inputedCity: string):void {
     // debugger;
