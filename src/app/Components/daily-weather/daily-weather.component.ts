@@ -20,18 +20,18 @@ export class DailyWeatherComponent {
   weatherInfo!: SimpleWeatherResponse;
   infoInC: boolean = true;
 
-  changeInfoType(infoType:boolean) {
+  changeInfoType(infoType:boolean):void {
     this.infoInC = infoType
   }
 
-  clearInfo() {
+  clearInput():void {
+    this.inputedCity = ""
   }
 
 
 
   getDailyWeather(inputedCity: string):void {
     // debugger;
-        this.clearInfo()
         this.weatherService.getDailyWeather(inputedCity).subscribe({
           next: (res: any) => {
             this.weatherSectionActive = "active"
@@ -69,8 +69,6 @@ export class DailyWeatherComponent {
             console.log("ERROR");
           }
           })
-
-      // Clear InputedCity
   }
 
 }
