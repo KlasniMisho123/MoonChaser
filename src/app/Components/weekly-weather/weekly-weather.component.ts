@@ -18,6 +18,9 @@ export class WeeklyWeatherComponent {
   weatherService = inject(GetWeatherService)
   infoInC: boolean = true;
   selectDisplayDay!: number;
+
+  targetedWeekDay: {} = {}
+
   changeInfoType(infoType:boolean):void {
     this.infoInC = infoType
   }
@@ -32,6 +35,16 @@ export class WeeklyWeatherComponent {
       next: (res: SevenDaysForecast) => {
         this.weatherSectionActive = "active";
         this.selectDisplayDay = 0;
+        this.targetedWeekDay = {
+
+        }
+        // [src]="'https:' + weatherInfo.current.condition.icon"
+        // {{infoInC? weatherInfo.current.temp_c : weatherInfo.current.temp_f}}
+        // {{infoInC? weatherInfo.current.precip_mm  + ' mm' : weatherInfo.current.precip_in + ' in'}}
+        // {{weatherInfo.current.humidity}}
+        // {{infoInC? weatherInfo.current.wind_kph + ' km/h' : weatherInfo.current.wind_mph + ' mph'}}
+        // {{ currentDate | date:'mediumDate' }
+        // {{weatherInfo.current.condition.text}}
         console.log(res);
   
         // Store only the forecast days
