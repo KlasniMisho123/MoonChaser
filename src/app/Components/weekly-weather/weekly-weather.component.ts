@@ -17,15 +17,21 @@ export class WeeklyWeatherComponent {
   currentDate = new Date()
   weatherService = inject(GetWeatherService)
   infoInC: boolean = true;
-
+  selectDisplayDay!: number;
   changeInfoType(infoType:boolean):void {
     this.infoInC = infoType
+  }
+
+  selectWeekDay(index:number) {
+    this.selectDisplayDay = index
+    console.log(index)
   }
 
   getWeeklyWeather(inputedCity: string): void {
     this.weatherService.getWeeklyWeather(inputedCity).subscribe({
       next: (res: SevenDaysForecast) => {
         this.weatherSectionActive = "active";
+        this.selectDisplayDay = 0;
         console.log(res);
   
         // Store only the forecast days
