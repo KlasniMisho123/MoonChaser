@@ -77,7 +77,17 @@
                 <div class="text-sm md:text-base text-gray-600">{{weatherInfo.current.condition.text}}</div>
             </div>
           </div>
-        
+        <div *ngFor="ley day of weatherInfo.forecast.forecastday">
+            <div>
+                {{ day.date }}
+              </div>
+              <div>
+                Temp: {{ day.day.temp_c }}°C
+              </div>
+              <div>
+                Condition: {{ day.day.condition.text }}
+              </div>
+        </div>
     </div>
     <div *ngIf="weatherSectionActive === 'invalid'"  class="mx-auto mt-8 bg-yellow-100 p-8 w-[50%] text-black rounded border-2 border-yellow-500">
         <div class="text-lg font-bold text-yellow-700">
