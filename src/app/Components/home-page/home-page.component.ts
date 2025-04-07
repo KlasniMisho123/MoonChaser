@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit{
 
+  weatherText:string = "";
+  
+  ngOnInit(): void {
+    console.log("On Init Works")
+  }
+
+  get
 }

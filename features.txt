@@ -17,7 +17,7 @@ moonPhases.jpg
 --- Heropage 🏠---
 6. Heropage update
 
-1!. The background updates based on current weather:
+1!. The background updates based on current weather & time?:
 
 ☀️ Sunny → subtle sun rays / warm tones
 
