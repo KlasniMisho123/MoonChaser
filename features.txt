@@ -1,3 +1,5 @@
+=== Project State ===
+
 1. Demo Logo
 
 3. fetch live moon phase data ...
@@ -10,8 +12,22 @@
 5. moon phase buttons...
 moonPhases.jpg
 
+7.! responsive update...
+
 --- Heropage ---
 6. Heropage update
+
+1!. The background updates based on current weather:
+
+☀️ Sunny → subtle sun rays / warm tones
+
+🌧️ Rainy → light raindrop animation
+
+❄️ Snow → falling snowflake particles
+
+🌙 Night → twinkling stars, moon glow
+
+(apicall on init)
 
 -- reusable components --
 
@@ -26,6 +42,12 @@ property binding? input etc
 
 -- Errors 🚩--
 
+-- Features -- 
+1.localstorage -> theme/ c/f(?)
+
+2.footer update? built with angular? / repository?
+
+=== ****  ===
 
 --- To Add 🎯---
 ~ fonts
@@ -36,3 +58,5 @@ property binding? input etc
 --- Questions Bg ---
 ~ weekly-Weather shi amokomentarebul iSevenDaysForecast interface, rogor unda gamomekenebina
 ~ Environment - .env process not defiend / Environment.service setup??
+
+
