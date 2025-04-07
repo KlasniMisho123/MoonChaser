@@ -13,15 +13,15 @@ export class HomePageComponent implements OnInit{
   weatherService = inject(GetWeatherService)
 
   ngOnInit(): void {
-    this.getCurrentWeather()
+    // this.getCurrentWeather()
   }
 
   getCurrentWeather():void {
     this.weatherService.getDailyWeather('').subscribe({
-      next:(res =>{
+      next:(res) => {
 
-      }), 
-      error(err) {
+      },
+      error:(err) => {
         console.log(err)
       }
     })
