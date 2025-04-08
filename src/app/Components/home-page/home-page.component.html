@@ -3,12 +3,12 @@
             <img 
             [src]="!cardIndex 
             ? 'https://assets.science.nasa.gov/dynamicimage/assets/science/cds/svs/a000000/a004600/a004655/schrodinger.0210_print.jpg?w=1024&h=576&fit=crop&crop=faces%2Cfocalpoint' 
-            : 'https://i.pinimg.com/736x/4f/75/d2/4f75d25f51f2a11aa35d34fd775e8acc.jpg'" 
+            : 'https://i.pinimg.com/736x/90/93/2e/90932e347909e12002d60f6cf63e6cf8.jpg'" 
             class="absolute inset-0 w-full h-full object-cover z-0"
             [ngClass]="!isFirstLoad ? (cardIndex === 0 ? 'swipe-card-right' : 'swipe-card-left') : ''"
             alt="Background"
         />
-
+<!-- https://i.pinimg.com/736x/b3/2c/db/b32cdb118d8547e36cf36e9c7946cac9.jpg -->
 
         <div class="relative z-10 flex justify-evenly h-full ">
             <!-- Prev Card Btn -->
@@ -20,8 +20,8 @@
             </div>
              <!-- Card -->
             <div class="flex flex-col m-[15%] gap-4"> 
-                <h1 class="text-6xl font-bold ">Welcome to Moon Chaser</h1>
-                <h2 class="text-lg">
+                <h1 class="text-6xl font-bold drop-shadow-[0_0_10px_rgba(128,90,213,0.8)] ">Welcome to Moon Chaser</h1>
+                <h2 class="text-lg font-bold">
                     Your guide to tracking the skies: current weather, forecasts, and the ever-changing phases of the moon, wherever you are.
                 </h2>
                 <div class="my-8">
