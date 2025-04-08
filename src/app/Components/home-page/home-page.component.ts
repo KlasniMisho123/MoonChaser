@@ -1,9 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
