@@ -20,15 +20,17 @@ export class HomePageComponent implements OnInit{
   }
 
   ToggleCardIndex() {
-    console.log(this.cardIndex)
-    if( this.cardIndex === 0 || this.cardIndex === 3) {
+    console.log('Before:', this.cardIndex);
+  
+    if (this.cardIndex === 0 || this.cardIndex === 3) {
       this.cardIndex = 1;
-      console.log(this.cardIndex)
-    } else {
+    } else if (this.cardIndex === 1) {
       this.cardIndex = 0;
-      console.log(this.cardIndex)
     }
+  
+    console.log('After:', this.cardIndex);
   }
+  
   
 
   // getCurrentWeather():void {

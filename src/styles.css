@@ -115,23 +115,21 @@ body {
   background-color: rgb(203, 198, 198);
 }
 
-.next-home-card {
-  opacity: 0;
-  transition: all 0.5s;
-  cursor: pointer;
-  display: hidden;
-}
-
-.next-home-card-div:hover .next-home-card {
-  opacity: 1;
-}
-
 .swipe-card-right {
-  animation: swipe-right 0.4s ease-out forwards;
+  animation: swipeRightAnimation 0.5s forwards; /* Example animation */
 }
 
-.swipe-card-left {
-  animation: swipe-left 0.4s ease-out forwards;
+@keyframes swipeRightAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes swipe-right {
