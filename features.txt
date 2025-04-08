@@ -73,10 +73,9 @@ Responsiveness: Mobile-first layout that stacks well.
 2. logo?
 
 -- Skils To Work on 🎯--
-property binding? input etc
-
--- Workon 🎯-- 
-// API RESPONSE MODEL
+~ property binding? input etc
+~ API RESPONSE MODEL /models interfaces/ classes
+~ dynamic components (like in react)
 
 -- Errors 🚩--
 

@@ -12,11 +12,19 @@ export class HomePageComponent implements OnInit{
 
   weatherText:string = "";
   weatherService = inject(GetWeatherService)
+  cardIndex: number = 0;
 
   ngOnInit(): void {
     // this.getCurrentWeather()
   }
 
+  ToggleCardIndex() {
+    if( this.cardIndex === 0) {
+      this.cardIndex = 1;
+    } else {
+      this.cardIndex = 0;
+    }
+  }
   
 
   // getCurrentWeather():void {
