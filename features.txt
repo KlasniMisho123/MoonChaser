@@ -29,7 +29,7 @@ moonPhases.jpg
 
 (apicall on init/ set background)) - not possible, need permisions from user to get location/city. can't implement into project
 
-random Weather bacground - 🌧️
+aboutus card, weather card, moonphasescard? - 🌧️
 
 🧠 “Learn Weather” Mini Cards
 Hoverable cards like:
