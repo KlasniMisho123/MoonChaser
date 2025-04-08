@@ -72,14 +72,14 @@ body {
 }
 
 .previous-home-card {
-  display: none;
+  opacity: 0;
   transition: all 0.25s;
   cursor: pointer;
   display: hidden;
 }
 
 .previous-home-card-div:hover .previous-home-card {
-  display: block;
+  opacity: 1;
 }
 
 .next-home-card-div {
