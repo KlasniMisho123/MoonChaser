@@ -13,7 +13,8 @@ export class HomePageComponent implements OnInit{
 
   weatherText:string = "";
   weatherService = inject(GetWeatherService)
-  cardIndex: number = 3;
+  cardIndex: number = 0;
+  isFirstLoad: boolean = true;
 
   ngOnInit(): void {
     // this.getCurrentWeather()
@@ -22,13 +23,20 @@ export class HomePageComponent implements OnInit{
   ToggleCardIndex() {
     console.log('Before:', this.cardIndex);
   
-    if (this.cardIndex === 0 || this.cardIndex === 3) {
+    if (this.cardIndex === 0) {
       this.cardIndex = 1;
     } else if (this.cardIndex === 1) {
       this.cardIndex = 0;
     }
   
     console.log('After:', this.cardIndex);
+  }
+
+  ngAfterViewInit() {
+    // Set the flag to false once the view has fully initialized
+    setTimeout(() => {
+      this.isFirstLoad = false; // Now animations can apply after first load
+    }, 0);
   }
   
   
