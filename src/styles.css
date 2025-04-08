@@ -82,12 +82,48 @@ body {
   opacity: 1;
 }
 
-.next-home-card-div {
+.previous-home-card-div {
+  display: hidden;
+  transition: all 0.25s;
+  cursor: pointer;
+  display: hidden;
+}
 
+.previous-home-card-div:hover {
+  background-color: black;
+}
+
+.previous-home-card {
+  opacity: 0;
+  transition: all 0.25s;
+  cursor: pointer;
+  display: hidden;
+}
+
+.previous-home-card-div:hover .previous-home-card {
+  opacity: 1;
+}
+/*  */
+.next-home-card-div {
+  display: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: hidden;
+}
+
+.next-home-card-div:hover {
+  background-color: rgb(203, 198, 198);
 }
 
 .next-home-card {
+  opacity: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: hidden;
+}
 
+.next-home-card-div:hover .next-home-card {
+  opacity: 1;
 }
 
 
