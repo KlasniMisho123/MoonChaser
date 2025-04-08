@@ -16,14 +16,16 @@ export class HomePageComponent implements OnInit{
     // this.getCurrentWeather()
   }
 
-  getCurrentWeather():void {
-    this.weatherService.getDailyWeather('').subscribe({
-      next:(res) => {
+  
 
-      },
-      error:(err) => {
-        console.log(err)
-      }
-    })
-  }
+  // getCurrentWeather():void {
+  //   this.weatherService.getDailyWeather('').subscribe({
+  //     next:(res) => {
+
+  //     },
+  //     error:(err) => {
+  //       console.log(err)
+  //     }
+  //   })
+  // }
 }
