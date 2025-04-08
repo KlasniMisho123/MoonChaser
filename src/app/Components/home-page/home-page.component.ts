@@ -20,6 +20,7 @@ export class HomePageComponent implements OnInit{
   }
 
   ToggleCardIndex() {
+    console.log(this.cardIndex)
     if( this.cardIndex === 0 || this.cardIndex === 3) {
       this.cardIndex = 1;
       console.log(this.cardIndex)
