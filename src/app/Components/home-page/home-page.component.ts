@@ -17,7 +17,12 @@ export class HomePageComponent implements OnInit{
   isFirstLoad: boolean = true;
 
   ngOnInit(): void {
+      setTimeout(() => {
+        this.ToggleCardIndex()
+      }, 5000);
+      // toggle in every 10 sec or something
   }
+  
 
   ToggleCardIndex() {
     console.log('Before:', this.cardIndex);
