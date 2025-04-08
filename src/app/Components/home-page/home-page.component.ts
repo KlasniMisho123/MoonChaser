@@ -17,12 +17,11 @@ export class HomePageComponent implements OnInit{
   isFirstLoad: boolean = true;
 
   ngOnInit(): void {
-    // this.getCurrentWeather()
   }
 
   ToggleCardIndex() {
     console.log('Before:', this.cardIndex);
-  
+    this.isFirstLoad = false;
     if (this.cardIndex === 0) {
       this.cardIndex = 1;
     } else if (this.cardIndex === 1) {
@@ -32,10 +31,6 @@ export class HomePageComponent implements OnInit{
     console.log('After:', this.cardIndex);
   }
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.isFirstLoad = false;
-    }, 0);
-  }
+  
   
 }
