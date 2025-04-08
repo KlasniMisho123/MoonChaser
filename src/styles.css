@@ -60,6 +60,36 @@ body {
     animation: sunAnimation 15s linear infinite;
 }
 
+.previous-home-card-div {
+  display: hidden;
+  transition: all 0.25s;
+  cursor: pointer;
+  display: hidden;
+}
+
+.previous-home-card-div:hover {
+  background-color: black;
+}
+
+.previous-home-card {
+  display: none;
+  transition: all 0.25s;
+  cursor: pointer;
+  display: hidden;
+}
+
+.previous-home-card-div:hover .previous-home-card {
+  display: block;
+}
+
+.next-home-card-div {
+
+}
+
+.next-home-card {
+
+}
+
 
 
 @keyframes rotateToNight {
