@@ -33,22 +33,9 @@ export class HomePageComponent implements OnInit{
   }
 
   ngAfterViewInit() {
-    // Set the flag to false once the view has fully initialized
     setTimeout(() => {
-      this.isFirstLoad = false; // Now animations can apply after first load
+      this.isFirstLoad = false;
     }, 0);
   }
   
-  
-
-  // getCurrentWeather():void {
-  //   this.weatherService.getDailyWeather('').subscribe({
-  //     next:(res) => {
-
-  //     },
-  //     error:(err) => {
-  //       console.log(err)
-  //     }
-  //   })
-  // }
 }

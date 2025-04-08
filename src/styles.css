@@ -116,7 +116,7 @@ body {
 }
 
 .swipe-card-right {
-  animation: swipeRightAnimation 0.5s forwards; /* Example animation */
+  animation: swipeRightAnimation 0.5s forwards;
 }
 
 .swipe-card-right {

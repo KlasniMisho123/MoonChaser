@@ -78,7 +78,7 @@ Responsiveness: Mobile-first layout that stacks well.
 ~ dynamic components (like in react)
 
 -- Errors 🚩--
-
+Home background Load, Instant Slide animation
 -- Features -- 
 1.localstorage -> theme/ c/f(?)
 
