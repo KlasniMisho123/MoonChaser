@@ -91,6 +91,7 @@ Home background Load, Instant Slide animation
 ~ Icon Module? gets Weather Text and returns custom icons
 ~ Error handle, invalid cityName -> constant
 ~ to save current/ forecast weather section localstorage
+<!-- https://i.pinimg.com/736x/b3/2c/db/b32cdb118d8547e36cf36e9c7946cac9.jpg --> - second bg option in homepage
 
 --- Questions Bg ---
 ~ weekly-Weather shi amokomentarebul iSevenDaysForecast interface, rogor unda gamomekenebina
