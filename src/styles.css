@@ -60,13 +60,6 @@ body {
     animation: sunAnimation 15s linear infinite;
 }
 
-.previous-home-card-div {
-  display: hidden;
-  transition: all 0.25s;
-  cursor: pointer;
-  display: hidden;
-}
-
 .previous-home-card-div:hover {
   background-color: black;
 }
@@ -84,7 +77,7 @@ body {
 
 .previous-home-card-div {
   display: hidden;
-  transition: all 0.25s;
+  transition: all all 0.5s;
   cursor: pointer;
   display: hidden;
 }
@@ -93,14 +86,14 @@ body {
   background-color: black;
 }
 
-.previous-home-card {
+.next-home-card {
   opacity: 0;
-  transition: all 0.25s;
+  transition: all all 0.5s;
   cursor: pointer;
   display: hidden;
 }
 
-.previous-home-card-div:hover .previous-home-card {
+.next-home-card-div:hover .next-home-card {
   opacity: 1;
 }
 /*  */
