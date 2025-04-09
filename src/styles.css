@@ -32,7 +32,7 @@ body {
 
 
 .day-mode {
-  background: linear-gradient(to bottom, #87CEFA, #4682B4);
+  background: linear-gradient(to bottom, #fefefe, #ffffff);
   color: white;
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
@@ -118,6 +118,12 @@ body {
 
 .swipe-card-left {
   animation: swipeLeftAnimation 0.5s forwards;
+}
+
+
+.services-card {
+  background-image: url(https://media.istockphoto.com/id/1217882746/photo/diverse-team-of-electronics-development-engineers-standing-at-the-desk-working-with-documents.jpg?s=612x612&w=0&k=20&c=EvA0Gt_LKlGTHljVYZ6ha7QjDLY02_aUPJo_GcldWLc=);
+  object-fit: cover;
 }
 
 @keyframes swipeRightAnimation {
