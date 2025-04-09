@@ -126,6 +126,15 @@ body {
   object-fit: cover;
 }
 
+.aboutus-card:hover .aboutus-arrow {
+  color: rgb(36, 36, 99);
+}
+.aboutus-arrow {
+  transition: all;
+  transition: duration 3s;
+
+}
+
 @keyframes swipeRightAnimation {
   0% {
     transform: translateX(-100%);
