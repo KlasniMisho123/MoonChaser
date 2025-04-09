@@ -31,13 +31,19 @@
                     <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-8 rounded-full 
                     focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 shadow-md text-lg cursor-pointer"
                     [routerLink]="cardIndex===0? '/aboutus' : '/weather' ">
-                        {{cardIndex === 0? 'About Us' : 'Track the Skies'}}
+                    <div *ngIf="cardIndex === 0 || cardIndex === 3">About Us</div>
+
+                    <div *ngIf="cardIndex === 1" >
+                      <i class="fa-solid fa-sun text-yellow-500 "></i> Track the Skies
+                    </div>
+                    
                     </button>
 
                     <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-8 rounded-full 
-                    focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 shadow-md text-lg cursor-pointer"
-                    *ngIf="cardIndex">
-                        Track the Moon
+                    focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 shadow-md text-lg cursor-pointer "
+                    *ngIf="cardIndex"
+                    routerLink="/moon">
+                    <i class="fa-solid fa-moon text-indigo-700"></i> Lunar Insights
                     </button>
                 </div>
             </div>
