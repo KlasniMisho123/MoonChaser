@@ -30,7 +30,7 @@
                 <div class="my-8">
                     <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-8 rounded-full 
                     focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 shadow-md text-lg cursor-pointer"
-                    routerLink="/aboutus">
+                    [routerLink]="cardIndex===0? '/aboutus' : '/weather' ">
                         {{cardIndex === 0? 'About Us' : 'Weather with us'}}
                     </button>
                   </div>
