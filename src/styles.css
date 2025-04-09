@@ -127,13 +127,45 @@ body {
 }
 
 .aboutus-card:hover .aboutus-arrow {
-  color: rgb(36, 36, 99);
+  color: rgb(36, 36, 113);
 }
+
 .aboutus-arrow {
   transition: all;
   transition: duration 3s;
-
 }
+
+.services-item-card-one:hover  {
+  color: rgb(44, 44, 168);
+}
+.services-item-arrow-one {
+  transition: all;
+  transition: transform 0.25s ease-in-out;
+}
+.services-item-card-one:hover .services-item-arrow-one {
+  transform: translateX(10px);
+}
+.services-item-card-two:hover  {
+  color: rgb(44, 44, 168);
+}
+.services-item-arrow-two {
+  transition: all;
+  transition: transform 0.25s ease-in-out;
+}
+.services-item-card-two:hover .services-item-arrow-two {
+  transform: translateX(10px);
+}
+.services-item-card-three:hover  {
+  color: rgb(44, 44, 168);
+}
+.services-item-arrow-three {
+  transition: all;
+  transition: transform 0.25s ease-in-out;
+}
+.services-item-card-three:hover .services-item-arrow-three {
+  transform: translateX(10px);
+}
+
 
 @keyframes swipeRightAnimation {
   0% {
