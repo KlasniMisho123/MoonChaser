@@ -110,7 +110,6 @@
                 </div>
             </div>
         </div>
-        <!-- ETC CARD? -->
         <div class="flex justify-center items-center text-black gap-8 p-4 rounded cursor-pointer bg-white
          transition-all transition-duration-300 transition-ease-in-out ring-4 ring-blue-900 hover:scale-105 aboutus-card"
          routerLink="/aboutus"
@@ -128,6 +127,7 @@
                 <!-- Clear Skies -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
                 (click)="targetWeatherCard('clearSkies')"
+                [(ngClass)]="isWeathertypeSelected? (isWeathertypeSelected? 'text-red-500' : 'text-green-500') :''"
                 >
                   <div class="flex justify-center text-yellow-400 text-4xl">
                     <i class="fas fa-sun"></i>
