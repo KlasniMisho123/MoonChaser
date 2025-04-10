@@ -125,7 +125,7 @@
             <h2 class="text-2xl font-bold"> Weather Types</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
                 <!-- Clear Skies -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('clearSkies')"
                 [ngClass]="targetedWeatherType === 'clearSkies' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''"
                 >
@@ -137,7 +137,7 @@
                 </div>
               
                 <!-- Partly Cloudy -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('partlyCloudy')"
                 [ngClass]="targetedWeatherType === 'partlyCloudy' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''"
                 >
@@ -149,7 +149,7 @@
                 </div>
               
                 <!-- Cloudy -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('cloudy')"
                 [ngClass]="targetedWeatherType === 'cloudy' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-gray-300 text-4xl">
@@ -160,7 +160,7 @@
                 </div>
               
                 <!-- Rain -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('rain')"
                 [ngClass]="targetedWeatherType === 'rain' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-blue-400 text-4xl">
@@ -171,7 +171,7 @@
                 </div>
               
                 <!-- Thunderstorm -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('thunderStrom')"
                 [ngClass]="targetedWeatherType === 'thunderStrom' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-purple-500 text-4xl">
@@ -182,7 +182,7 @@
                 </div>
               
                 <!-- Snow -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('snow')"
                 [ngClass]="targetedWeatherType === 'snow' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-blue-200 text-4xl">
@@ -193,7 +193,7 @@
                 </div>
               
                 <!-- Fog / Mist -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('mist')"
                 [ngClass]="targetedWeatherType === 'mist' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-gray-300 text-4xl">
@@ -204,7 +204,7 @@
                 </div>
               
                 <!-- Windy -->
-                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
+                <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
                 (click)="targetWeatherCard('windy')"
                 [ngClass]="targetedWeatherType === 'windy' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-blue-400 text-4xl">
