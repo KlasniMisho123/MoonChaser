@@ -15,7 +15,9 @@ export class HomePageComponent implements OnInit{
   weatherService = inject(GetWeatherService)
   cardIndex: number = 0;
   isFirstLoad: boolean = true;
-
+  isWeathertypeSelected:boolean = false;
+  targetedWeatherType:string = ""
+  
   ngOnInit(): void {
       setTimeout(() => {
         this.ToggleCardIndex()
@@ -25,17 +27,19 @@ export class HomePageComponent implements OnInit{
   
 
   ToggleCardIndex() {
-    console.log('Before:', this.cardIndex);
     this.isFirstLoad = false;
     if (this.cardIndex === 0) {
       this.cardIndex = 1;
     } else if (this.cardIndex === 1) {
       this.cardIndex = 0;
     }
-  
-    console.log('After:', this.cardIndex);
   }
 
-  
+  targetWeatherCard(weatherType:string) {
+    if(weatherType === this.targetedWeatherType) {
+      this.isWeathertypeSelected = false
+    }
+    this.isWeathertypeSelected = true
+  }
   
 }
