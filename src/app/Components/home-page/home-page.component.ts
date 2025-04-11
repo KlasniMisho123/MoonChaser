@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit{
   cardIndex: number = 0;
   isFirstLoad: boolean = true;
   isWeathertypeSelected:boolean = false;
-  targetedWeatherType:string = ""
+  targetedWeatherType:number = -1;
   
   ngOnInit(): void {
       setTimeout(() => {
@@ -35,10 +35,10 @@ export class HomePageComponent implements OnInit{
     }
   }
 
-  targetWeatherCard(weatherType:string) {
+  targetWeatherCard(weatherType:number) {
     if(weatherType === this.targetedWeatherType) {
       this.isWeathertypeSelected = false
-      this.targetedWeatherType = "";
+      this.targetedWeatherType = -1;
     } else {
       this.isWeathertypeSelected = true
       this.targetedWeatherType = weatherType;
