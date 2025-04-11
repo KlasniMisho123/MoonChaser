@@ -175,6 +175,13 @@ body {
   transition: all 0.3s ease;
 }
 
+.goal-list > i {
+  transition: color 0.1s ease-in-out;
+}
+
+.goal-list:hover > i {
+  color: red;
+}
 
 
 @keyframes swipeRightAnimation {
