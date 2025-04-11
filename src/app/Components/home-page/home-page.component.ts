@@ -22,6 +22,8 @@ export class HomePageComponent implements OnInit{
   selecteWeatherTypeInfo: {
     label?: string;
     description?: string;
+    fact?: string;
+    suggestion?: string;
     stats?: string[];
   } = {};
   
