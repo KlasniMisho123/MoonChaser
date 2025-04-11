@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { weatherTypeInfo } from '../constant/constant';
 
 @Component({
   selector: 'app-home-page',
@@ -17,7 +18,9 @@ export class HomePageComponent implements OnInit{
   isFirstLoad: boolean = true;
   isWeathertypeSelected:boolean = false;
   targetedWeatherType:number = -1;
+  selecteWeatherTypeInfo:{} = {};
   
+
   ngOnInit(): void {
       setTimeout(() => {
         this.ToggleCardIndex()
@@ -39,10 +42,15 @@ export class HomePageComponent implements OnInit{
     if(weatherType === this.targetedWeatherType) {
       this.isWeathertypeSelected = false
       this.targetedWeatherType = -1;
+      this.selecteWeatherTypeInfo = {};
     } else {
       this.isWeathertypeSelected = true
       this.targetedWeatherType = weatherType;
+      this.setWeatherTypeInfo(weatherType)
     }
   }
   
+  setWeatherTypeInfo(index:number):void {
+    this.selecteWeatherTypeInfo = weatherTypeInfo[index];
+  }
 }
