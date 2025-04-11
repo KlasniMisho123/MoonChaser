@@ -126,8 +126,8 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
                 <!-- Clear Skies -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('clearSkies')"
-                [ngClass]="targetedWeatherType === 'clearSkies' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''"
+                (click)="targetWeatherCard(0)"
+                [ngClass]="targetedWeatherType === 0 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''"
                 >
                   <div class="flex justify-center text-yellow-400 text-4xl">
                     <i class="fas fa-sun"></i>
@@ -138,8 +138,8 @@
               
                 <!-- Partly Cloudy -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('partlyCloudy')"
-                [ngClass]="targetedWeatherType === 'partlyCloudy' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''"
+                (click)="targetWeatherCard(1)"
+                [ngClass]="targetedWeatherType === 1 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''"
                 >
                   <div class="flex justify-center text-yellow-300 text-4xl">
                     <i class="fas fa-cloud-sun"></i>
@@ -150,8 +150,8 @@
               
                 <!-- Cloudy -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('cloudy')"
-                [ngClass]="targetedWeatherType === 'cloudy' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(2)"
+                [ngClass]="targetedWeatherType === 2 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-gray-300 text-4xl">
                     <i class="fas fa-cloud"></i>
                   </div>
@@ -161,8 +161,8 @@
               
                 <!-- Rain -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('rain')"
-                [ngClass]="targetedWeatherType === 'rain' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(3)"
+                [ngClass]="targetedWeatherType === 3 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-blue-400 text-4xl">
                     <i class="fas fa-cloud-showers-heavy"></i>
                   </div>
@@ -172,8 +172,8 @@
               
                 <!-- Thunderstorm -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('thunderStrom')"
-                [ngClass]="targetedWeatherType === 'thunderStrom' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(4)"
+                [ngClass]="targetedWeatherType === 4 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-purple-500 text-4xl">
                     <i class="fas fa-bolt"></i>
                   </div>
@@ -183,8 +183,8 @@
               
                 <!-- Snow -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('snow')"
-                [ngClass]="targetedWeatherType === 'snow' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(5)"
+                [ngClass]="targetedWeatherType === 5 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-blue-200 text-4xl">
                     <i class="fas fa-snowflake"></i>
                   </div>
@@ -194,8 +194,8 @@
               
                 <!-- Fog / Mist -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('mist')"
-                [ngClass]="targetedWeatherType === 'mist' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(6)"
+                [ngClass]="targetedWeatherType === 6 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-gray-300 text-4xl">
                     <i class="fas fa-smog"></i>
                   </div>
@@ -205,8 +205,8 @@
               
                 <!-- Windy -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('windy')"
-                [ngClass]="targetedWeatherType === 'windy' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(7)"
+                [ngClass]="targetedWeatherType === 7 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-blue-400 text-4xl">
                     <i class="fas fa-wind"></i>
                   </div>
@@ -216,8 +216,8 @@
               
                 <!-- Extreme Heat -->
                 <div class="bg-white/80 p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer border-2 border-transparent"
-                (click)="targetWeatherCard('extremeHeat')"
-                [ngClass]="targetedWeatherType === 'extremeHeat' ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
+                (click)="targetWeatherCard(8)"
+                [ngClass]="targetedWeatherType === 8 ? 'weatherCardActive' : isWeathertypeSelected ? '' : ''">
                   <div class="flex justify-center text-red-500 text-4xl">
                     <i class="fas fa-thermometer-full"></i>
                   </div>
