@@ -1,5 +1,6 @@
 export const weatherTypeInfo = [
     {
+    imgSrc: "https://i.pinimg.com/736x/76/8b/50/768b50c7c5e3dd9c98a2dfb1cf5fd329.jpg",
       label: "Clear Skies",
       description: "Clear skies usually indicate dry, sunny, and calm weather conditions with minimal cloud cover.",
       fact: "Did you know? Clear skies are most common in desert climates due to low humidity.",
@@ -12,6 +13,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://i.pinimg.com/736x/04/6a/eb/046aeb05b2396c31672bb33ba4d5fe54.jpg",
       label: "Partly Cloudy",
       description: "Partly cloudy weather brings a mix of sun and clouds, offering mild temperatures and moderate UV levels.",
       fact: "Did you know? Partly cloudy skies can enhance sunset colors due to scattered light.",
@@ -24,6 +26,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://i.pinimg.com/736x/77/9b/5a/779b5a7cf79aa90a79eb76c541ee8b1c.jpg",
       label: "Overcast",
       description: "Overcast skies are fully covered with clouds, resulting in cooler temperatures and diffused sunlight.",
       fact: "Did you know? Overcast skies can still allow up to 80% of UV rays through.",
@@ -36,6 +39,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://i.pinimg.com/736x/d0/ef/9f/d0ef9fa995e4c600d7eee8dafd12febd.jpg",
       label: "Rain",
       description: "Rainy conditions are characterized by steady or intermittent precipitation and higher humidity levels.",
       fact: "Did you know? The smell of rain is called 'petrichor', caused by plant oils and soil bacteria.",
