@@ -2,6 +2,8 @@ export const weatherTypeInfo = [
     {
       label: "Clear Skies",
       description: "Clear skies usually indicate dry, sunny, and calm weather conditions with minimal cloud cover.",
+      fact: "Did you know? Clear skies are most common in desert climates due to low humidity.",
+      suggestion: "A great day to go for a walk or enjoy a picnic in the park!",
       stats: [
         "Average temperature: 25–30°C",
         "UV Index: High (6–8)",
@@ -22,6 +24,7 @@ export const weatherTypeInfo = [
     {
       label: "Overcast",
       description: "Overcast skies are fully covered with clouds, resulting in cooler temperatures and diffused sunlight.",
+      fact: "Clear skies often occur when a high-pressure system is present in the atmosphere.",
       stats: [
         "Average temperature: 18–24°C",
         "UV Index: Low (1–3)",
