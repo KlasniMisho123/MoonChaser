@@ -91,7 +91,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
-    imgSrc: "https://imagedelivery.net/1KomXrSWiTojGGip43n0SQ/cdfaf933-5a6e-47ae-613c-1cd36132cf00/public",
+    imgSrc: "https://i.pinimg.com/736x/39/90/73/3990730201a8a1c4c7aa15c0fd1232fe.jpg",
       label: "Windy",
       description: "Windy conditions involve strong and consistent air movement that can affect temperature and comfort levels.",
       fact: "Did you know? The fastest wind speed ever recorded on Earth was 407 km/h during a tornado.",
