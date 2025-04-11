@@ -20,6 +20,7 @@ export class HomePageComponent implements OnInit{
   targetedWeatherType:number = -1;
   // do class / intefrace later for selectedweatherTypeInfo
   selecteWeatherTypeInfo: {
+    imgSrc?: string;
     label?: string;
     description?: string;
     fact?: string;

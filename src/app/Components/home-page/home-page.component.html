@@ -226,8 +226,8 @@
                 </div>
               </div>
               <div *ngIf="isWeathertypeSelected" class="flex flex-col items-center border-2 border-black rounded p-4 gap-2 w-[40%]">
-                <img src="https://i.pinimg.com/736x/d0/ef/9f/d0ef9fa995e4c600d7eee8dafd12febd.jpg" alt="info-card">
-                
+                <img src="{{ selecteWeatherTypeInfo?.imgSrc || '' }}" alt="info-card" />
+                <!-- https://imagedelivery.net/1KomXrSWiTojGGip43n0SQ/12ef9938-d90d-4034-e6a9-6db1c29e4500/public -->
                 <h2 class="text-4xl font-bold text-center my-4">{{ selecteWeatherTypeInfo.label || '' }}</h2>
                 
                 <p class="text-gray-700 text-sm lg:text-base text-center">

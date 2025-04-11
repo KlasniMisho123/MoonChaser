@@ -52,6 +52,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://i.pinimg.com/736x/ff/19/de/ff19deae39162d6b4a5683d60b21f33d.jpg",
       label: "Thunderstorms",
       description: "Thunderstorms involve lightning, thunder, and potentially heavy rain or hail with gusty winds.",
       fact: "Did you know? Lightning heats the air to 30,000°C—five times hotter than the sun’s surface!",
@@ -64,6 +65,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://i.pinimg.com/736x/ec/2d/b5/ec2db5288856c5326b10ac1d58de433d.jpg",
       label: "Snow",
       description: "Snowy weather occurs in cold climates and can lead to icy conditions and reduced visibility.",
       fact: "Did you know? Snowflakes can have up to 180 intricate branches and no two are alike.",
@@ -76,6 +78,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://i.pinimg.com/736x/54/83/bb/5483bb592c24f186c634e5d953694ed4.jpg",
       label: "Fog",
       description: "Fog consists of low-lying clouds that significantly reduce visibility and can create hazardous travel conditions.",
       fact: "Did you know? Fog is essentially a cloud at ground level formed by condensation.",
@@ -88,6 +91,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+    imgSrc: "https://imagedelivery.net/1KomXrSWiTojGGip43n0SQ/cdfaf933-5a6e-47ae-613c-1cd36132cf00/public",
       label: "Windy",
       description: "Windy conditions involve strong and consistent air movement that can affect temperature and comfort levels.",
       fact: "Did you know? The fastest wind speed ever recorded on Earth was 407 km/h during a tornado.",
@@ -100,6 +104,7 @@ export const weatherTypeInfo = [
       ]
     },
     {
+        imgSrc: "https://i.pinimg.com/736x/3b/33/49/3b3349fa71d4903193c75f1221620191.jpg",
       label: "Extreme Weather",
       description: "Extreme weather includes severe events like heatwaves, hurricanes, or blizzards with significant impacts.",
       fact: "Did you know? Extreme weather events are increasing in frequency due to climate change.",
