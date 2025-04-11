@@ -18,7 +18,12 @@ export class HomePageComponent implements OnInit{
   isFirstLoad: boolean = true;
   isWeathertypeSelected:boolean = false;
   targetedWeatherType:number = -1;
-  selecteWeatherTypeInfo:{} = {};
+  // do class / intefrace later for selectedweatherTypeInfo
+  selecteWeatherTypeInfo: {
+    label?: string;
+    description?: string;
+    stats?: string[];
+  } = {};
   
 
   ngOnInit(): void {
