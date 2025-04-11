@@ -36,9 +36,6 @@ export class HomePageComponent implements OnInit{
   }
 
   targetWeatherCard(weatherType:string) {
-    // console.log(this.isWeathertypeSelected)
-    // console.log(weatherType)
-    // console.log(this.targetedWeatherType)
     if(weatherType === this.targetedWeatherType) {
       this.isWeathertypeSelected = false
       this.targetedWeatherType = "";
