@@ -14,7 +14,8 @@ weatherService = inject(GetWeatherService)
 
 currentMoonPhase: string = "";
 currentDate:string = "";
-selectedCity: string | null = null;
+// selectedCity: string | null = null;
+selectedCity: string = "Buenos Aires";
 
 rawDate!:Date;
 year!:string;
@@ -24,7 +25,7 @@ day!:string;
 
   ngOnInit(): void {
     this.getCurrentMoonPhase()
-    this.selectedCity = prompt("Your City");
+    // this.selectedCity = prompt("Your City");
   }
 
 
@@ -37,7 +38,7 @@ day!:string;
     this.day = this.rawDate.getDate().toString().padStart(2, '0');
     this.currentDate = this.year + "-" + this.month + "-" + this.day
 
-    this.weatherService.getAstronomyInfo("tbilisi", this.currentDate).subscribe({
+    this.weatherService.getAstronomyInfo(this.selectedCity, this.currentDate).subscribe({
       next: (res:any) => {
         console.log("res: ", res)
         this.currentMoonPhase = res.astronomy.astro.moon_phase
