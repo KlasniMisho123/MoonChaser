@@ -64,4 +64,4 @@ Rotate or randomly display:
 
 “Fog is basically a cloud at ground level.”
 
--
+-https://rapidapi.com/MoonAPIcom/api/moon-phase/playground/apiendpoint_b510efd1-6d76-4990-9aae-23a906cea6ab - mooon API - on init current phase?
