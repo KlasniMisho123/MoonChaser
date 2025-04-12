@@ -30,10 +30,9 @@ export class HomePageComponent implements OnInit{
   
 
   ngOnInit(): void {
-      setTimeout(() => {
+      setInterval(() => {
         this.ToggleCardIndex()
       }, 5000);
-      // toggle in every 10 sec or something
   }
   
 
