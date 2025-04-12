@@ -34,8 +34,8 @@ day!:string;
     this.month = (this.rawDate.getMonth() + 1).toString().padStart(2, '0');
     this.day = this.rawDate.getDate().toString().padStart(2, '0');
     this.currentDate = this.year + "-" + this.month + "-" + this.day
-    
-    this.weatherService.getAstronomyInfo("tbilisi","2025-04-12").subscribe({
+
+    this.weatherService.getAstronomyInfo("tbilisi", this.currentDate).subscribe({
       next: (res:any) => {
         console.log("res: ", res)
         this.currentMoonPhase = res.astronomy.astro.moon_phase
