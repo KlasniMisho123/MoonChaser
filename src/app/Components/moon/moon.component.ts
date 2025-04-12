@@ -67,37 +67,44 @@ ngOnInit(): void {
   rotateWithMoonPhase(cardIndex: number) {
     switch (cardIndex) {
       case -1:
-        this.activeStyle = ""
+        this.activeStyle = "rotate-90"
         break;
       case 0:
-        this.activeStyle = ""
+        this.activeStyle = "rotate-90"
         break;
       case 1:
         // code for waxing crescent
+        // this.activeStyle = "Waxing Crescent";
         this.activeStyle = "Waxing Crescent";
         break;
       case 2:
         // code for first quarter
+        // this.activeStyle = "First Quarter";
         this.activeStyle = "First Quarter";
         break;
       case 3:
         // code for waxing gibbous
+        // this.activeStyle = "Waxing Gibbous";
         this.activeStyle = "Waxing Gibbous";
         break;
       case 4:
         // code for full moon
+        // this.activeStyle = "Full Moon";
         this.activeStyle = "Full Moon";
         break;
       case 5:
         // code for waning gibbous
+        // this.activeStyle = "Waning Gibbous";
         this.activeStyle = "Waning Gibbous";
         break;
       case 6:
         // code for last quarter
+        // this.activeStyle = "Last Quarter";
         this.activeStyle = "Last Quarter";
         break;
       case 7:
         // code for waning crescent
+        // this.activeStyle = "Waning Crescent";
         this.activeStyle = "Waning Crescent";
         break;
       default:
