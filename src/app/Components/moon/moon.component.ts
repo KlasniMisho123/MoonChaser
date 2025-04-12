@@ -45,6 +45,7 @@ selectedMoonPhaseInfo: {
 
 ngOnInit(): void {
   // this.getCurrentMoonPhase(this.selectedCity)
+  this.rotateWithMoonPhase(this.targetedMoonPhase)
 }
 
   targetMoonPhaseCard(cardIndex:number) {
@@ -67,10 +68,10 @@ ngOnInit(): void {
   rotateWithMoonPhase(cardIndex: number) {
     switch (cardIndex) {
       case -1:
-        this.activeStyle = "rotate-90"
+        this.activeStyle = "rotate-[-90deg]"
         break;
       case 0:
-        this.activeStyle = "rotate-90"
+        this.activeStyle = "rotate-[-90deg]"
         break;
       case 1:
         // code for waxing crescent
