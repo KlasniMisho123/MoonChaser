@@ -30,6 +30,10 @@ targetedMoonPhase:number = -1;
 isMoonPhaseSelected:boolean = false;
 selecteMoonPhaseInfo:{} ={}
 
+// rotatewithMoonPhases 
+activeStyle:string = ""
+
+
 selectedMoonPhaseInfo: {
   imgSrc?: string;
   label?: string;
@@ -63,42 +67,41 @@ ngOnInit(): void {
   rotateWithMoonPhase(cardIndex: number) {
     switch (cardIndex) {
       case -1:
-        console.log("Default: New Moon");
+        this.activeStyle = ""
         break;
       case 0:
-        // code for new moon
-        console.log("New Moon");
+        this.activeStyle = ""
         break;
       case 1:
         // code for waxing crescent
-        console.log("Waxing Crescent");
+        this.activeStyle = "Waxing Crescent";
         break;
       case 2:
         // code for first quarter
-        console.log("First Quarter");
+        this.activeStyle = "First Quarter";
         break;
       case 3:
         // code for waxing gibbous
-        console.log("Waxing Gibbous");
+        this.activeStyle = "Waxing Gibbous";
         break;
       case 4:
         // code for full moon
-        console.log("Full Moon");
+        this.activeStyle = "Full Moon";
         break;
       case 5:
         // code for waning gibbous
-        console.log("Waning Gibbous");
+        this.activeStyle = "Waning Gibbous";
         break;
       case 6:
         // code for last quarter
-        console.log("Last Quarter");
+        this.activeStyle = "Last Quarter";
         break;
       case 7:
         // code for waning crescent
-        console.log("Waning Crescent");
+        this.activeStyle = "Waning Crescent";
         break;
       default:
-        console.log("Unknown phase");
+        this.activeStyle = ""
         break;
     }
   }
