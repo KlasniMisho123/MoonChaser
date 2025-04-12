@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit{
   isWeathertypeSelected:boolean = false;
   targetedWeatherType:number = -1;
   // do class / intefrace later for selectedweatherTypeInfo
-  selecteWeatherTypeInfo: {
+  selectedWeatherTypeInfo: {
     imgSrc?: string;
     label?: string;
     description?: string;
@@ -49,7 +49,7 @@ export class HomePageComponent implements OnInit{
     if(weatherType === this.targetedWeatherType) {
       this.isWeathertypeSelected = false
       this.targetedWeatherType = -1;
-      this.selecteWeatherTypeInfo = {};
+      this.selectedWeatherTypeInfo = {};
     } else {
       this.isWeathertypeSelected = true
       this.targetedWeatherType = weatherType;
@@ -58,6 +58,6 @@ export class HomePageComponent implements OnInit{
   }
   
   setWeatherTypeInfo(index:number):void {
-    this.selecteWeatherTypeInfo = weatherTypeInfo[index];
+    this.selectedWeatherTypeInfo = weatherTypeInfo[index];
   }
 }
