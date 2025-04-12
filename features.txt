@@ -44,7 +44,9 @@ Icons: Weather & moon icons that shift subtly on hover.
 
 Responsiveness: Mobile-first layout that stacks well.
 
--- 🏠--
+--- 🌙moon page ---
+selected city moonphase/ background rotation??
+
 
 -- reusable components --
 
@@ -62,6 +64,8 @@ Home background Load, Instant Slide animation
 1.localstorage -> theme/ c/f(?)
 
 2.footer update? built with angular? / repository?
+
+-- 🏠--
 
 === ****  ===
 
