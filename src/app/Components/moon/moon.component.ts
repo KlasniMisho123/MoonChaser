@@ -15,7 +15,7 @@ weatherService = inject(GetWeatherService)
 
 currentMoonPhase: string = "";
 currentDate:string = "";
-selectedCity: string = "Tbilisi";
+selectedCity: string = "";
 
 rawDate!:Date;
 year!:string;
