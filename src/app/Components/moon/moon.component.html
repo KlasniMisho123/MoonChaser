@@ -1,11 +1,63 @@
-<div class="bg-transparent">
+<!--  -->
+<div class="relative h-[90vh]">
     <img 
-    src="moonPhases-nobg.png" 
-    class="object-cover transition-transform duration-300 origin-center mx-auto" 
-    alt="Moon Phases" />
+    src="https://spaceplace.nasa.gov/review/moon-phases/moon-phases.en.gif"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    alt="Background"
+  />
 </div>
 
-<div class="flex justify-center "> 
+<div class="px-4 py-8 bg-white text-black my-8 rounded-lg shadow-md">
+    
+    <div class="flex flex-col items-center gap-8">
+      <h2 class="text-2xl font-bold">Moon Phases</h2>
+
+      <div class="bg-transparent max-w-lg mx-auto my-8">
+        <img
+          src="moonPhases-nobg.png"
+          class="object-cover transition-transform duration-300 origin-center w-full h-auto"
+          alt="Moon Phases"
+        />
+    </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/366/new-moon.jpg?w=640&h=613&fit=clip&crop=faces%2Cfocalpoint" alt="New Moon" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">New Moon</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/waxing-crescent.png" alt="Waxing Crescent" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">Waxing Crescent</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/first-quarter.png" alt="First Quarter" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">First Quarter</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/waxing-gibbous.png" alt="Waxing Gibbous" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">Waxing Gibbous</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/full-moon.png" alt="Full Moon" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">Full Moon</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/waning-gibbous.png" alt="Waning Gibbous" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">Waning Gibbous</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/third-quarter.png" alt="Third Quarter" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">Third Quarter</p>
+        </div>
+        <div class="bg-gray-100 rounded-md shadow-sm p-4 flex flex-col items-center">
+          <img src="path/to/waning-crescent.png" alt="Waning Crescent" class="w-16 h-16 object-contain" />
+          <p class="mt-2 text-sm font-semibold">Waning Crescent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="flex justify-center p-8 "> 
     <form  #form="ngForm" class="flex flex-col justify-center mt-12 gap-8">
             <div class="text-red-400 text-sm md:text-base mt-1" *ngIf="inputedCityRef.touched && inputedCityRef.invalid">
                 <span *ngIf="inputedCityRef.errors?.['required']">🚩 City Is Required.</span>
