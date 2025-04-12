@@ -1,4 +1,4 @@
-import { Component,  inject,  OnInit } from '@angular/core';
+import { Component,  inject,  input,  OnInit } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +14,7 @@ weatherService = inject(GetWeatherService)
 
 currentMoonPhase: string = "";
 currentDate:string = "";
+selectedCity: string | null = null;
 
 rawDate!:Date;
 year!:string;
@@ -23,6 +24,7 @@ day!:string;
 
   ngOnInit(): void {
     this.getCurrentMoonPhase()
+    this.selectedCity = prompt("Your City");
   }
 
 
