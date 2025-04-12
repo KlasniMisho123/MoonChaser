@@ -11,11 +11,21 @@ export class MoonComponent implements OnInit{
 
 weatherService = inject(GetWeatherService)
 
+currentMoonPhase: string = "";
+
   ngOnInit(): void {
     this.getCurrentMoonPhase()
   }
 
   getCurrentMoonPhase() {
-    getAstrono
+    this.weatherService.getAstronomyInfo("tbilisi","2025-04-12").subscribe({
+      next: (res:any) => {
+        console.log("res: ", res)
+        this.currentMoonPhase = res
+      }, 
+      error: (err) => {
+        console.log("Astronomy API ERROR: ", err)
+      }
+    })
   }
 }
