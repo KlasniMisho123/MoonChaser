@@ -13,30 +13,37 @@ export class MoonComponent implements OnInit{
 
 weatherService = inject(GetWeatherService)
 
+// on init Values
 currentMoonPhase: string = "";
-currentDate:string = "";
 selectedCity: string = "";
 
-cardIndex: number = 0;
-isFirstLoad: boolean = true;
+// Date Format Values
+currentDate:string = "";
 rawDate!:Date;
 year!:string;
 month!:string; 
 day!:string; 
 
+// targetedMoonPhaseCard Values
+targetedMoonPhase:number = -1;
+isMoonPhaseSelected:boolean = false;
+selecteMoonPhaseInfo:{} ={}
 
-  ngOnInit(): void {
-    // this.getCurrentMoonPhase(this.selectedCity)
-  }
+ngOnInit(): void {
+  // this.getCurrentMoonPhase(this.selectedCity)
+}
 
-  ToggleCardIndex():void {
-    this.isFirstLoad = false;
-    if (this.cardIndex === 0) {
-      this.cardIndex = 1;
-    } else if (this.cardIndex === 1) {
-      this.cardIndex = 0;
-    }
-  }
+targetedMoonPhaseCard(cardIndex:number) {
+if(cardIndex === this.targetedMoonPhase) {
+  this.isMoonPhaseSelected = false
+  this.targetedMoonPhase = -1;
+  this.selecteMoonPhaseInfo = {};
+} else {
+  this.isMoonPhaseSelected = true;
+  this.targetedMoonPhase = cardIndex;
+  // this.selecteMoonPhaseInfo = {}; set INFO
+}
+}
 
   getCurrentMoonPhase(inputedCity:string) {
     this.rawDate = new Date();
@@ -57,6 +64,5 @@ day!:string;
       }
     })
   }
-
 
 }
