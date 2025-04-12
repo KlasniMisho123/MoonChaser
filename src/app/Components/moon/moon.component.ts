@@ -17,4 +17,5 @@ export class MoonComponent implements OnInit{
   getCurrentMoonPhase() {
     console.log("Current MoonPhase")
   }
+  
 }
