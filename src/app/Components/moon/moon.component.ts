@@ -11,20 +11,24 @@ import { DatePipe } from '@angular/common';
 export class MoonComponent implements OnInit{
 
 weatherService = inject(GetWeatherService)
+datePipe = inject(DatePipe)
 
 currentMoonPhase: string = "";
 
 currentDate:string= ""
-rawDate:Date=
+rawDate!:Date
 
   ngOnInit(): void {
     this.getCurrentMoonPhase()
   }
 
+
+
   getCurrentMoonPhase() {
     this.rawDate = new Date()
+    this.currentDate = this.datePipe.transform(this.rawDate, 'yyyy-MM-dd') || '';
 
-    console.log("currentDate: ", this.currentDate | DatePipe)
+    console.log("currentDate: ", this.currentDate)
     this.weatherService.getAstronomyInfo("tbilisi","2025-04-12").subscribe({
       next: (res:any) => {
         console.log("res: ", res)
