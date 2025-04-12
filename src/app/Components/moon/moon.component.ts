@@ -33,7 +33,7 @@ ngOnInit(): void {
   // this.getCurrentMoonPhase(this.selectedCity)
 }
 
-targetedMoonPhaseCard(cardIndex:number) {
+targetMoonPhaseCard(cardIndex:number) {
 if(cardIndex === this.targetedMoonPhase) {
   this.isMoonPhaseSelected = false
   this.targetedMoonPhase = -1;
