@@ -176,14 +176,18 @@ body {
 }
 
 .moonPhaseCardActive {
-  background-color: #1e293b; /* Dark grayish blue (slate-800) */
-  border: 1px solid #94a3b8; /* Medium gray (slate-400) */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
-              0 0 8px rgba(255, 255, 255, 0.3); /* White highlight effect */
-  color: white; /* Ensure text is readable on dark background */
+  background-color: #e0e7ff; /* Indigo-100 */
+  border: 1px solid #c3dafe; /* Indigo-200 */
+  background-image: radial-gradient(circle at top left, #f0f4ff 0%, #e0e7ff 100%);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.2); /* Soft indigo glow */
   transform: scale(1.05);
   transition: all 0.3s ease;
+  color: #3730a3; /* Indigo-800 for readable text */
+  border-radius: 10px;
 }
+
+
+
 
 .goal-list > i {
   transition: color 0.1s ease-in-out;
