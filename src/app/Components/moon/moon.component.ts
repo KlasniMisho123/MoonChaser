@@ -1,10 +1,11 @@
 import { Component,  inject,  input,  OnInit } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-moon',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './moon.component.html',
   styleUrl: './moon.component.css'
 })
