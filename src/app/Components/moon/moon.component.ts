@@ -1,4 +1,5 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component,  inject,  OnInit } from '@angular/core';
+import { GetWeatherService } from '../../Services/get-weather.service';
 
 @Component({
   selector: 'app-moon',
@@ -6,16 +7,15 @@ import { Component,  OnInit } from '@angular/core';
   templateUrl: './moon.component.html',
   styleUrl: './moon.component.css'
 })
-
 export class MoonComponent implements OnInit{
 
+weatherService = inject(GetWeatherService)
 
   ngOnInit(): void {
     this.getCurrentMoonPhase()
   }
 
   getCurrentMoonPhase() {
-    console.log("Current MoonPhase")
+    getAstrono
   }
-  
 }
