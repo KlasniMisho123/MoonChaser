@@ -53,6 +53,7 @@ ngOnInit(): void {
       this.targetedMoonPhase = cardIndex;
       this.setMoonPhaseInfo(cardIndex)
     }
+    this.rotateWithMoonPhase(this.targetedMoonPhase)
   }
 
   setMoonPhaseInfo(cardIndex:number):void {
@@ -61,6 +62,9 @@ ngOnInit(): void {
 
   rotateWithMoonPhase(cardIndex: number) {
     switch (cardIndex) {
+      case -1:
+        console.log("Default: New Moon");
+        break;
       case 0:
         // code for new moon
         console.log("New Moon");
