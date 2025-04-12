@@ -17,6 +17,8 @@ currentMoonPhase: string = "";
 currentDate:string = "";
 selectedCity: string = "";
 
+cardIndex: number = 0;
+isFirstLoad: boolean = true;
 rawDate!:Date;
 year!:string;
 month!:string; 
@@ -24,9 +26,17 @@ day!:string;
 
 
   ngOnInit(): void {
-    this.getCurrentMoonPhase(this.selectedCity)
+    // this.getCurrentMoonPhase(this.selectedCity)
   }
 
+  ToggleCardIndex():void {
+    this.isFirstLoad = false;
+    if (this.cardIndex === 0) {
+      this.cardIndex = 1;
+    } else if (this.cardIndex === 1) {
+      this.cardIndex = 0;
+    }
+  }
 
   getCurrentMoonPhase(inputedCity:string) {
     this.rawDate = new Date();
@@ -47,4 +57,6 @@ day!:string;
       }
     })
   }
+
+
 }
