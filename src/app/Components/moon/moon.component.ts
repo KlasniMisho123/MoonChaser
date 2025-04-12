@@ -2,6 +2,7 @@ import { Component,  inject,  input,  OnInit } from '@angular/core';
 import { GetWeatherService } from '../../Services/get-weather.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { moonPhaseInfo } from '../constant/constant'
 
 @Component({
   selector: 'app-moon',
@@ -29,6 +30,15 @@ targetedMoonPhase:number = -1;
 isMoonPhaseSelected:boolean = false;
 selecteMoonPhaseInfo:{} ={}
 
+selectedMoonPhaseInfo: {
+  imgSrc?: string;
+  label?: string;
+  description?: string;
+  energy?: string;
+  visibility?: string;
+  nextPhase?: string;
+} = {};
+
 ngOnInit(): void {
   // this.getCurrentMoonPhase(this.selectedCity)
 }
@@ -41,9 +51,13 @@ if(cardIndex === this.targetedMoonPhase) {
 } else {
   this.isMoonPhaseSelected = true;
   this.targetedMoonPhase = cardIndex;
-  // this.selecteMoonPhaseInfo = {}; set INFO
+  // this.selectedMoonPhaseInfo = {}; set INFO
 }
 }
+
+  setMoonPhaseInfo(cardIndex:number):void {
+    this.selectedMoonPhaseInfo = moonPhaseInfo[cardIndex];
+  }
 
   getCurrentMoonPhase(inputedCity:string) {
     this.rawDate = new Date();
