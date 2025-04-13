@@ -70,6 +70,9 @@ Home background Load, Instant Slide animation
 === ****  ===
 
 --- To Add 🎯---
+ddd
+
+--- To Add 🎯---
 ~ fonts
 ~ Icon Module? gets Weather Text and returns custom icons
 ~ Error handle, invalid cityName -> constant
