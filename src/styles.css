@@ -186,7 +186,6 @@ body {
   border-radius: 10px;
 }
 
-
 .goal-list > i {
   transition: color 0.1s ease-in-out;
 }
@@ -194,6 +193,26 @@ body {
 .goal-list:hover > i {
   color: red;
 }
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.moonInfoIntro{
+  animation: slideInFromRight 0.4s ease-out forwards;
+}
+.moonInfOutro{
+  /* animation: slideInFromRight 0.4s ease-out forwards; */
+  background-color: red;
+}
+
 
 
 @keyframes swipeRightAnimation {
