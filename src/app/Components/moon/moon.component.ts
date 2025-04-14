@@ -3,6 +3,7 @@ import { GetWeatherService } from '../../Services/get-weather.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { moonPhaseInfo } from '../constant/constant'
+import { MoonPhase } from '../../model/interface/weather';
 
 @Component({
   selector: 'app-moon',
@@ -31,8 +32,9 @@ isMoonPhaseSelected:boolean = false;
 // rotatewithMoonPhases 
 activeStyle:string = ""
 
-currentLocationInfo: {} ={};
-currentMoonPhase: {} ={};
+currentCountry:string ="";
+currentLocName:string ="";
+currentMoonPhase!:MoonPhase;
 
 selectedMoonPhaseInfo: {
   imgSrc?: string;
