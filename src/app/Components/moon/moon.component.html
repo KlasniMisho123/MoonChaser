@@ -20,7 +20,7 @@
         />
         <div
           [ngClass]="isMoonPhaseSelected ? 'moonInfoIntro' : 'moonInfoOutro'"
-          class="bg-gray-900 absolute right-0 w-md max-w-md h-[700px] rounded-l object-cover"
+          class="bg-gray-900 absolute right-0 w-md max-w-md h-[850px] rounded-l object-cover overflow-hidden"
         >
         <img src="{{selectedMoonPhaseInfo.imgSrc || '' }}" alt="info-card" class="w-full h-[400px]" />
                 <h2 class="text-4xl font-bold text-center my-4">{{ selectedMoonPhaseInfo.label || ''}}</h2>
@@ -54,8 +54,6 @@
                 <div *ngIf="selectedMoonPhaseInfo" class="bg-blue-100 text-blue-900 text-sm p-3 rounded w-full shadow mt-2">
                   <strong>Suggestion:</strong>
                 </div>
-          <!-- style="background-image: url(https://i.pinimg.com/736x/d7/33/04/d7330453d2453d468313c81ca54c773d.jpg);" -->
-          <!-- {{selectedMoonPhaseInfo.label}} -->
         </div>
 
       </div>
