@@ -28,7 +28,6 @@ day!:string;
 // targetedMoonPhaseCard Values
 targetedMoonPhase:number = -1;
 isMoonPhaseSelected:boolean = false;
-selecteMoonPhaseInfo:{} ={}
 
 // rotatewithMoonPhases 
 activeStyle:string = ""
@@ -52,7 +51,7 @@ ngOnInit(): void {
     if(cardIndex === this.targetedMoonPhase) {
     this.isMoonPhaseSelected = false
     this.targetedMoonPhase = -1;
-    this.selecteMoonPhaseInfo = {};
+    this.selectedMoonPhaseInfo = {};
     } else {
       this.isMoonPhaseSelected = true;
       this.targetedMoonPhase = cardIndex;
