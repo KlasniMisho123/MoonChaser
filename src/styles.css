@@ -4,7 +4,7 @@ body {
   background-color: #1a1a2e;
   color: white;
   transition: background-color 1s ease-in-out;
-
+  overflow-x: hidden;
 }
 
 img {
@@ -211,12 +211,14 @@ img {
 
 @keyframes slideOutromRight {
   from {
+    display: block;
     transform: translateX(0);
     opacity: 1;
   }
   to {
     transform: translateX(100%);
     opacity: 0;
+    display: none;
   }
 }
 
@@ -224,7 +226,6 @@ img {
   animation: slideInFromRight 0.4s ease-out forwards;
 }
 .moonInfoOutro{
-  /* animation: slideInFromRight 0.4s ease-out forwards; */
   animation: slideOutromRight 0.4s ease-out forwards;
 }
 
