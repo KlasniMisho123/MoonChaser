@@ -85,4 +85,6 @@ ddd
 
 
 
-///??? secrets/ .env?
+///???
+ secrets/ .env?
+ Vercel Deployment/ API/ enviroment Variables
