@@ -113,8 +113,17 @@ ngOnInit(): void {
     this.weatherService.getAstronomyInfo(this.selectedCity, this.currentDate).subscribe({
       next: (res:any) => {
         console.log("res: ", res)
-        this.currentMoonPhase = res.astronomy.astro
-        this.currentLocationInfo = res.location
+
+        this.currentMoonPhase = {
+          sunrise: res.astronomy.astro.sunrise,
+          sunset: res.astronomy.astro.sunset,
+          moonrise: res.astronomy.astro.moonrise,
+          moonset: res.astronomy.astro.moonset,
+          moon_phase: res.astronomy.astro.moon_phase,
+          moon_illumination: res.astronomy.astro.moon_illumination,
+          is_moon_up: res.astronomy.astro.is_moon_up,
+          is_sun_up: res.astronomy.astro.is_sun_up,
+        };
       }, 
       error: (err) => {
         console.log("Astronomy API ERROR: ", err)
