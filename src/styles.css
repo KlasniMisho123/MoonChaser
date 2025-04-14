@@ -36,10 +36,11 @@ img {
 
 
 .day-mode {
-  background: linear-gradient(to bottom, #fefefe, #ffffff);
+  background: linear-gradient(to bottom, #2e3a47, #4a5b6a);
   color: white;
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
+
 
 .moonMovementAnimation img {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -53,11 +54,6 @@ img {
 .moonMovementAnimation img.toDay {
   transform: rotate(0deg);
   opacity: 1;
-}
-
-
-.moonMovementAnimation {
-    /* animation: moonAnimation 5s linear infinite; */
 }
 
 .sunMovementAnimation {
