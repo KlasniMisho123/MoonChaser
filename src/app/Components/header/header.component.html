@@ -12,4 +12,11 @@
         <a class="nav-link" routerLink="/moon" routerLinkActive="active">Moon</a>
         <a class="nav-link truncate" routerLink="/aboutus" routerLinkActive="active">About</a>
     </nav>  
+
+    <div class="h-[50vh] w-full bg-cover bg-center flex flex-col items-center " 
+     style="background-image: url('https://www.10wallpaper.com/wallpaper/1366x768/1406/switzerland_stars-scenery_HD_Wallpaper_1366x768.jpg');">
+        <button class="flex justify-center items-center mr-8 cursor-pointer" (click)="toggleDayNight()">
+            <img src="day&night.png" class="w-[150px] h-auto drop-shadow-lg" [ngClass]="isNight? 'toNight' : 'toDay'">
+        </button>
+    </div>
 </section>
