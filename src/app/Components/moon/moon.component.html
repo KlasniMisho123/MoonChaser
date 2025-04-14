@@ -11,39 +11,38 @@
     
     <div class="flex flex-col items-center gap-4">
       <h2 class="text-4xl font-bold">Moon Phases</h2>
+      <p class="mx-[10%]"> If you have looked into the night sky, you may have noticed the Moon appears to change shape each night. Some nights, the Moon might look like a narrow crescent.
+         Other nights, the Moon might look like a bright circle. And on other nights, you might not be able to see the Moon at all. 
+         The different shapes of the Moon that we see at different times of the month are called the Moon’s phases.</p>
 
       <div class="bg-transparent max-w-sm mx-auto my-8 w-full flex justify-between" >
         <img
           src="moonPhases-nobg.png"
-          [ngClass]="'object-cover transition-transform duration-300 origin-center w-full h-auto  ' + activeStyle"
+          [ngClass]="'object-cover transition-transform duration-300 origin-center w-full h-auto mb-[350px] md:mb-0 ' + activeStyle"
           alt="Moon Phases"
         />
         <div
           [ngClass]="isMoonPhaseSelected ? 'moonInfoIntro' : 'moonInfoOutro'"
-          class="absolute right-0 w-full max-w-md h-[750px] bg-gradient-to-b from-gray-900/80 to-gray-800/90 text-white rounded-l-2xl shadow-2xl overflow-y-auto backdrop-blur-md"
+          class="absolute right-0 w-full max-w-md h-[750px] bg-gradient-to-b from-gray-900/80 to-gray-800/90 text-white rounded-l-2xl shadow-2xl overflow-y-auto backdrop-blur-md mb-[350px] md:mb-0"
         >
-          <!-- Header Image -->
           <img
             [src]="selectedMoonPhaseInfo.imgSrc || ''"
             alt="Moon Phase"
             class="w-full h-[280px] object-cover rounded-tl-2xl brightness-75 shadow-inner"
           />
 
-          <!-- Title -->
           <h2 class="text-3xl font-semibold text-center my-6 tracking-wide">
             {{ selectedMoonPhaseInfo.label || 'Unknown Phase' }}
           </h2>
 
-          <!-- Description -->
           <p class="text-gray-300 text-sm lg:text-base text-center px-6 leading-relaxed">
             {{ selectedMoonPhaseInfo.description || 'No description available.' }}
           </p>
 
-          <!-- Moon Stats -->
           <div class="mt-6 px-6">
             <ul class="space-y-4 bg-white/5 p-6 rounded-xl shadow-inner backdrop-blur-md">
               <li class="flex items-center gap-4">
-                <i class="fa-solid fa-bolt text-yellow-300 text-lg"></i>
+                <i class="fa-solid fa-bolt text-yellow-300 text-lg rotate-[-15deg]"></i>
                 <span class="text-sm">Energy: {{ selectedMoonPhaseInfo.energy || 'N/A' }}</span>
               </li>
               <li class="flex items-center gap-4">
