@@ -15,7 +15,6 @@ export class MoonComponent implements OnInit{
 weatherService = inject(GetWeatherService)
 
 // on init Values
-currentMoonPhase: string = "";
 selectedCity: string = "";
 
 // Date Format Values
@@ -31,7 +30,8 @@ isMoonPhaseSelected:boolean = false;
 
 // rotatewithMoonPhases 
 activeStyle:string = ""
-currentLocationInfo:string =""
+currentMoonPhase: {} ={};
+currentLocationInfo: {} ={}
 
 selectedMoonPhaseInfo: {
   imgSrc?: string;
@@ -112,8 +112,8 @@ ngOnInit(): void {
     this.weatherService.getAstronomyInfo(this.selectedCity, this.currentDate).subscribe({
       next: (res:any) => {
         console.log("res: ", res)
-        this.currentMoonPhase = res.astronomy.astro.moon_phase
-        this.currentLocationInfo = res.astronomy.astro.moon_phase
+        this.currentMoonPhase = res.astronomy.astro
+        this.currentLocationInfo = res.location
       }, 
       error: (err) => {
         console.log("Astronomy API ERROR: ", err)
