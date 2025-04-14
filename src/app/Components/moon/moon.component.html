@@ -12,7 +12,7 @@
     <div class="flex flex-col items-center gap-4">
       <h2 class="text-4xl font-bold">Moon Phases</h2>
 
-      <div class="bg-transparent max-w-sm mx-auto my-8 w-full flex justify-between">
+      <div class="bg-transparent max-w-sm mx-auto my-8 w-full flex justify-between" >
         <img
           src="moonPhases-nobg.png"
           [ngClass]="'object-cover transition-transform duration-300 origin-center w-full h-auto  ' + activeStyle"
@@ -20,7 +20,7 @@
         />
         <div
           [ngClass]="isMoonPhaseSelected ? 'moonInfoIntro' : 'moonInfoOutro'"
-          class="bg-gray-900 absolute right-0 w-md max-w-md h-[700px] rounded-l object-cover"
+          class="bg-gray-900 absolute right-0 w-md max-w-md h-[700px] rounded-l object-cover bg-white/10 backdrop-blur-md"
           style="background-image: url(https://i.pinimg.com/736x/d7/33/04/d7330453d2453d468313c81ca54c773d.jpg);"
         >
           {{selectedMoonPhaseInfo.label}}

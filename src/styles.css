@@ -7,6 +7,10 @@ body {
 
 }
 
+img {
+  user-select: none;
+}
+
 .night-mode {
   background-color: #1a1a2e;
   color: white;
