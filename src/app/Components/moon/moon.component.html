@@ -19,8 +19,12 @@
           alt="Moon Phases"
         />
         <div
-        ngClass="isMoonPhaseSelected? moonInfoIntro: moonInfoOutro" 
-        class="bg-blue-300 absolute right-0 ">mooninfodiplay</div>
+          [ngClass]="isMoonPhaseSelected ? 'moonInfoIntro' : 'moonInfoOutro'"
+          class="bg-blue-300 absolute right-0"
+        >
+          {{selectedMoonPhaseInfo.label}}
+        </div>
+
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">

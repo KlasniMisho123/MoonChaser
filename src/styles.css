@@ -208,9 +208,9 @@ body {
 .moonInfoIntro{
   animation: slideInFromRight 0.4s ease-out forwards;
 }
-.moonInfOutro{
+.moonInfoOutro{
   /* animation: slideInFromRight 0.4s ease-out forwards; */
-  background-color: red;
+  color: red;
 }
 
 
