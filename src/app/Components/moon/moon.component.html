@@ -134,29 +134,26 @@
             focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-opacity-50 relative cursor-pointer hover:opacity-90">
                  View Moon Phase Info
                 <i class="fa-solid fa-eye"></i>
-            </button>
-
-            <div class="text-center relative max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-8 rounded-2xl backdrop-blur-md shadow-2xl bg-gradient-to-br from-[#1a1c2c] to-[#3c4059] border border-white/10 text-white">
-              <h2 class="text-xl sm:text-2xl font-semibold mb-2 tracking-wide">🌙 Moon Phase - {{currentLocName}}/{{currentCountry}}</h2>
-              
-              <p class="text-lg sm:text-xl font-bold text-purple-200">Waning Gibbous</p>
-              <p class="text-sm sm:text-base text-gray-300 mb-4">💡 99% illuminated</p>
-            
-              <div class="text-sm sm:text-base space-y-1 font-light">
-                <p>🌅 <span class="text-gray-400">Sunrise:</span> 06:22 AM</p>
-                <p>🌇 <span class="text-gray-400">Sunset:</span> 07:41 PM</p>
-                <p>🌙 <span class="text-gray-400">Moonrise:</span> 09:22 PM</p>
-                <p>🌄 <span class="text-gray-400">Moonset:</span> 06:39 AM</p>
-              </div>
-            
-              <div class="mt-5 text-xs sm:text-sm text-gray-400 italic">
-                <p>🔭 The moon is currently below the horizon.</p>
-                <p>☀️ The sun is still shining.</p>
-              </div>
-            
-              <div class="absolute inset-0 bg-white/5 rounded-2xl pointer-events-none"></div>
-            </div>
-            
-
-        </form>
-</div>
+          </button>    
+          </form>
+        </div>
+        <div *ngIf="currentLocName" class="mb-8 text-center relative max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-8 rounded-2xl backdrop-blur-md shadow-2xl bg-gradient-to-br from-[#1a1c2c] to-[#3c4059] border border-white/10 text-white">
+          <h2 class="text-xl sm:text-2xl font-semibold mb-2 tracking-wide">🌙 Moon Phase - {{currentLocName}}, {{currentCountry}}</h2>
+          
+          <p class="text-lg sm:text-xl font-bold text-purple-200">Waning Gibbous</p>
+          <p class="text-sm sm:text-base text-gray-300 mb-4">💡 99% illuminated</p>
+        
+          <div class="text-sm sm:text-base space-y-1 font-light">
+            <p>🌅 <span class="text-gray-400">Sunrise:</span> 06:22 AM</p>
+            <p>🌇 <span class="text-gray-400">Sunset:</span> 07:41 PM</p>
+            <p>🌙 <span class="text-gray-400">Moonrise:</span> 09:22 PM</p>
+            <p>🌄 <span class="text-gray-400">Moonset:</span> 06:39 AM</p>
+          </div>
+        
+          <div class="mt-5 text-xs sm:text-sm text-gray-400 italic">
+            <p>🔭 The moon is currently below the horizon.</p>
+            <p>☀️ The sun is still shining.</p>
+          </div>
+        
+          <div class="absolute inset-0 bg-white/5 rounded-2xl pointer-events-none"></div>
+        </div>
