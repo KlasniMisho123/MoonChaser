@@ -205,14 +205,24 @@ body {
   }
 }
 
+@keyframes slideOutromRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 .moonInfoIntro{
   animation: slideInFromRight 0.4s ease-out forwards;
 }
 .moonInfoOutro{
   /* animation: slideInFromRight 0.4s ease-out forwards; */
-  color: red;
+  animation: slideOutromRight 0.4s ease-out forwards;
 }
-
 
 
 @keyframes swipeRightAnimation {
