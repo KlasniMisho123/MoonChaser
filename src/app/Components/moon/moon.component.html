@@ -137,7 +137,7 @@
           </button>    
           </form>
         </div>
-        <div *ngIf="currentLocName" class="mb-8 text-center relative max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-8 rounded-2xl backdrop-blur-md shadow-2xl bg-gradient-to-br from-[#1a1c2c] to-[#3c4059] border border-white/10 text-white">
+        <div *ngIf="moonSectionActive==='true' " class="mb-8 text-center relative max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-8 rounded-2xl backdrop-blur-md shadow-2xl bg-gradient-to-br from-[#1a1c2c] to-[#3c4059] border border-white/10 text-white">
           <h2 class="text-xl sm:text-2xl font-semibold mb-2 tracking-wide">🌙 Moon Phase - {{currentLocName}}, {{currentCountry}}</h2>
           
           <p class="text-lg sm:text-xl font-bold text-purple-200">{{currentMoonPhase.moon_phase}}</p>
@@ -157,3 +157,12 @@
         
           <div class="absolute inset-0 bg-white/5 rounded-2xl pointer-events-none"></div>
         </div>
+
+        <div *ngIf="moonSectionActive === 'invalid'"  class="mx-auto mt-8 bg-yellow-100 p-8 w-[50%] text-black rounded border-2 border-yellow-500">
+          <div class="text-lg font-bold text-yellow-700">
+              <i class="fa-solid fa-triangle-exclamation mr-2 text-red-700"></i> Invalid City Name
+          </div>
+          <div class="text-sm text-gray-600 mt-2">
+              Please check the city name and try again.
+          </div>
+      </div>

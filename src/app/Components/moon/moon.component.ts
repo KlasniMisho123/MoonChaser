@@ -31,6 +31,7 @@ isMoonPhaseSelected:boolean = false;
 
 // rotatewithMoonPhases 
 activeStyle:string = ""
+moonSectionActive:string = "false";
 
 currentCountry:string ="";
 currentLocName:string ="";
@@ -46,7 +47,6 @@ selectedMoonPhaseInfo: {
 } = {};
 
 ngOnInit(): void {
-  // this.getCurrentMoonPhase(this.selectedCity)
   this.rotateWithMoonPhase(this.targetedMoonPhase)
 }
 
@@ -127,9 +127,10 @@ ngOnInit(): void {
           is_moon_up: res.astronomy.astro.is_moon_up,
           is_sun_up: res.astronomy.astro.is_sun_up,
         };
+        this.moonSectionActive = "true";
       }, 
       error: (err) => {
-        console.log("Astronomy API ERROR: ", err)
+        this.moonSectionActive = "invalid";
       }
     })
   }
