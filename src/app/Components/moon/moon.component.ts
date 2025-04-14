@@ -114,7 +114,6 @@ ngOnInit(): void {
 
     this.weatherService.getAstronomyInfo(this.selectedCity, this.currentDate).subscribe({
       next: (res:any) => {
-        console.log("res: ", res)
         this.currentCountry = res.location.country
         this.currentLocName = res.location.name
 
