@@ -31,7 +31,7 @@ isMoonPhaseSelected:boolean = false;
 
 // rotatewithMoonPhases 
 activeStyle:string = ""
-
+currentLocationInfo:string =""
 
 selectedMoonPhaseInfo: {
   imgSrc?: string;
@@ -113,6 +113,7 @@ ngOnInit(): void {
       next: (res:any) => {
         console.log("res: ", res)
         this.currentMoonPhase = res.astronomy.astro.moon_phase
+        this.currentLocationInfo = res.astronomy.astro.moon_phase
       }, 
       error: (err) => {
         console.log("Astronomy API ERROR: ", err)
