@@ -120,7 +120,7 @@ export const weatherTypeInfo = [
   
   export const moonPhaseInfo = [
     {
-      imgSrc: "https://i.pinimg.com/736x/8b/e0/9c/8be09c96b1d5c269ce2b099d339c173e.jpg",
+      imgSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/366/new-moon.jpg?w=640&h=613&fit=clip&crop=faces%2Cfocalpoint",
       label: "New Moon",
       description: "The Moon is between Earth and the Sun, making it invisible from Earth.",
       energy: "A time for reflection, intention setting, and new beginnings.",
@@ -128,7 +128,7 @@ export const weatherTypeInfo = [
       nextPhase: "Waxing Crescent"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/4e/bf/84/4ebf8467a27561b3d7ef82f7cbe91b9e.jpg",
+      imgSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/368/waxing-crescent.jpg?w=640&h=613&fit=clip&crop=faces%2Cfocalpoint",
       label: "Waxing Crescent",
       description: "A thin sliver of the Moon becomes visible after the New Moon.",
       energy: "Ideal for planning and building momentum toward goals.",
@@ -136,7 +136,7 @@ export const weatherTypeInfo = [
       nextPhase: "First Quarter"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/21/ef/3a/21ef3aa9a1eacac1ae8e4a028b03cbbb.jpg",
+      imgSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/367/first-quarter.jpg?w=640&h=613&fit=clip&crop=faces%2Cfocalpoint",
       label: "First Quarter",
       description: "Half the Moon is visible; the right side is illuminated.",
       energy: "Time for action, making decisions, and facing challenges.",
@@ -144,7 +144,7 @@ export const weatherTypeInfo = [
       nextPhase: "Waxing Gibbous"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/f9/d3/3c/f9d33c9f191e948f1e2fa1f0996d8d5e.jpg",
+      imgSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/365/waxing-gibbous.jpg?w=640&h=613&fit=clip&crop=faces%2Cfocalpoint",
       label: "Waxing Gibbous",
       description: "More than half of the Moon is visible and growing toward full.",
       energy: "Refinement and preparation before completion.",
@@ -152,7 +152,7 @@ export const weatherTypeInfo = [
       nextPhase: "Full Moon"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/f4/64/e9/f464e9b771e04df3cb59760769d90c43.jpg",
+      imgSrc: "https://science.nasa.gov/wp-content/uploads/2023/08/full.jpg",
       label: "Full Moon",
       description: "The entire face of the Moon is illuminated and fully visible.",
       energy: "Heightened emotions, celebration, and manifestation.",
@@ -160,7 +160,7 @@ export const weatherTypeInfo = [
       nextPhase: "Waning Gibbous"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/d4/f8/31/d4f831b2a17e196d5e78e45b7f69d9d0.jpg",
+      imgSrc: "https://science.nasa.gov/wp-content/uploads/2023/08/waning-gibbous.jpg",
       label: "Waning Gibbous",
       description: "The Moon begins to shrink but remains more than half lit.",
       energy: "Gratitude, sharing, and introspection.",
@@ -168,7 +168,7 @@ export const weatherTypeInfo = [
       nextPhase: "Last Quarter"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/1f/3b/27/1f3b27aa7082ef6bb6c9e0e7bafeb6ae.jpg",
+      imgSrc: "https://science.nasa.gov/wp-content/uploads/2023/08/third-quarter.jpg",
       label: "Last Quarter",
       description: "Half the Moon is lit again, this time on the left side.",
       energy: "Release, forgiveness, and letting go of what no longer serves you.",
@@ -176,7 +176,7 @@ export const weatherTypeInfo = [
       nextPhase: "Waning Crescent"
     },
     {
-      imgSrc: "https://i.pinimg.com/736x/65/b0/fc/65b0fcfe0c0f47a7be9fc49d3961bcdf.jpg",
+      imgSrc: "https://science.nasa.gov/wp-content/uploads/2023/08/waning-crescent.jpg",
       label: "Waning Crescent",
       description: "A thin crescent remains before the Moon disappears into the New Moon.",
       energy: "Rest, reflection, and restoration before the next cycle.",
