@@ -20,41 +20,44 @@
         />
         <div
           [ngClass]="isMoonPhaseSelected ? 'moonInfoIntro' : 'moonInfoOutro'"
-          class="bg-gray-900 absolute right-0 w-md max-w-md h-[850px] rounded-l object-cover overflow-hidden text-white "
+          class="absolute right-0 w-full max-w-md h-[750px] bg-gradient-to-b from-gray-900/80 to-gray-800/90 text-white rounded-l-2xl shadow-2xl overflow-y-auto backdrop-blur-md"
         >
-        <img src="{{selectedMoonPhaseInfo.imgSrc || '' }}" alt="info-card" class="w-full h-[400px] brightness-125" />
-                <h2 class="text-4xl font-bold text-center my-4">{{ selectedMoonPhaseInfo.label || ''}}</h2>
-                
-                <p class="text-gray-300 text-sm lg:text-base text-center">
-                  {{ selectedMoonPhaseInfo.description || '' }}
-                </p>
-              
-                <ul class="my-4 p-4 rounded-lg bg-white/70 shadow-md space-y-2 text-sm text-gray-800 w-full mx-2">
-                  <li class="flex items-center gap-2">
-                    <i class="fas fa-thermometer-half text-red-500"></i>
-                    <span>{{ selectedMoonPhaseInfo.energy || '' }}</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <i class="fas fa-sun text-yellow-500"></i>
-                    <span>{{ selectedMoonPhaseInfo.visibility || '' }}</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <i class="fas fa-tint text-blue-500"></i>
-                    <span>{{ selectedMoonPhaseInfo.nextPhase || '' }}</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <i class="fas fa-eye text-green-600"></i>
-                  </li>
-                </ul>
-              
-                <div *ngIf="selectedMoonPhaseInfo" class="bg-yellow-100 text-yellow-900 text-sm p-3 rounded w-full shadow">
-                  <strong>Fact:</strong>
-                </div>
-              
-                <div *ngIf="selectedMoonPhaseInfo" class="bg-blue-100 text-blue-900 text-sm p-3 rounded w-full shadow mt-2">
-                  <strong>Suggestion:</strong>
-                </div>
+          <!-- Header Image -->
+          <img
+            [src]="selectedMoonPhaseInfo.imgSrc || ''"
+            alt="Moon Phase"
+            class="w-full h-[280px] object-cover rounded-tl-2xl brightness-75 shadow-inner"
+          />
+
+          <!-- Title -->
+          <h2 class="text-3xl font-semibold text-center my-6 tracking-wide">
+            {{ selectedMoonPhaseInfo.label || 'Unknown Phase' }}
+          </h2>
+
+          <!-- Description -->
+          <p class="text-gray-300 text-sm lg:text-base text-center px-6 leading-relaxed">
+            {{ selectedMoonPhaseInfo.description || 'No description available.' }}
+          </p>
+
+          <!-- Moon Stats -->
+          <div class="mt-6 px-6">
+            <ul class="space-y-4 bg-white/5 p-6 rounded-xl shadow-inner backdrop-blur-md">
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-bolt text-yellow-300 text-lg"></i>
+                <span class="text-sm">Energy: {{ selectedMoonPhaseInfo.energy || 'N/A' }}</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-moon text-blue-300 text-lg"></i>
+                <span class="text-sm">Visibility: {{ selectedMoonPhaseInfo.visibility || 'N/A' }}</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-arrow-right text-purple-300 text-lg"></i>
+                <span class="text-sm">Next Phase: {{ selectedMoonPhaseInfo.nextPhase || 'N/A' }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
+
 
       </div>
 
