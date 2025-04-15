@@ -20,7 +20,6 @@ export class GetWeatherService {
   }
 
   getAstronomyInfo(cityName:string, date:string):Observable<any>{
-    // return this.http.get<any>(environment.ASTRONOMY_API_URL_BASE + `${cityName}&dt=2025-04-12`)
     return this.http.get<any>(environment.ASTRONOMY_API_URL_BASE + `${cityName}&dt=${date}`)
   }
 
